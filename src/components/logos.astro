@@ -1,0 +1,187 @@
+---
+// @ts-ignore
+import { Icon } from "astro-icon/components";
+import { Picture } from "astro:assets";
+import Lusha from "assets/proof/lusha.svg";
+import Badilatti from "assets/proof/badilatti.svg";
+import Gmpro from "assets/proof/gmpro.svg";
+import Dpstudio from "assets/proof/dpstudio.svg";
+import ScuolaGuida from "assets/proof/scuolaguida.svg";
+import Software from "assets/proof/software.svg";
+---
+
+<div class="mt-24">
+  <h2 class="text-center text-slate-500">Tecnologie</h2>
+  <div class="flex gap-8 md:gap-20 items-center justify-center mt-12 flex-wrap">
+    <Icon
+      data-tooltip-target="tooltip-react"
+      class="size-8 md:size-8 hover:text-northsouth cursor-pointer"
+      name="simple-icons:react"
+    />
+    <Icon
+      data-tooltip-target="tooltip-angular"
+      class="size-8 md:size-8 hover:text-northsouth cursor-pointer"
+      name="simple-icons:angular"
+    />
+    <Icon
+      data-tooltip-target="tooltip-ionic"
+      class="size-8 md:size-8 hover:text-northsouth cursor-pointer"
+      name="simple-icons:ionic"
+    />
+    <Icon
+      data-tooltip-target="tooltip-shopify"
+      class="size-8 md:size-8 hover:text-northsouth cursor-pointer"
+      name="simple-icons:shopify"
+    />
+    <Icon
+      data-tooltip-target="tooltip-notion"
+      class="size-8 md:size-8 hover:text-northsouth cursor-pointer"
+      name="simple-icons:notion"
+    />
+    <Icon
+      data-tooltip-target="tooltip-odoo"
+      class="size-8 md:size-8 hover:text-northsouth cursor-pointer"
+      name="simple-icons:odoo"
+    />
+    <Icon
+      data-tooltip-target="tooltip-heroku"
+      class="size-8 md:size-8 hover:text-northsouth cursor-pointer"
+      name="simple-icons:heroku"
+    />
+    <Icon
+      data-tooltip-target="tooltip-vercel"
+      class="size-8 md:size-8 hover:text-northsouth cursor-pointer"
+      name="simple-icons:vercel"
+    />
+    <Icon
+      data-tooltip-target="tooltip-defstrapiault"
+      class="size-8 md:size-8 hover:text-northsouth cursor-pointer"
+      name="simple-icons:strapi"
+    />
+
+    <div
+      id="tooltip-react"
+      role="tooltip"
+      class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+      React
+      <div class="tooltip-arrow" data-popper-arrow></div>
+    </div>
+
+    <div
+      id="tooltip-ionic"
+      role="tooltip"
+      class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+      Ionic
+      <div class="tooltip-arrow" data-popper-arrow></div>
+    </div>
+
+    <div
+      id="tooltip-shopify"
+      role="tooltip"
+      class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+      Shopify
+      <div class="tooltip-arrow" data-popper-arrow></div>
+    </div>
+
+    <div
+      id="tooltip-angular"
+      role="tooltip"
+      class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+      Angular
+      <div class="tooltip-arrow" data-popper-arrow></div>
+    </div>
+
+    <div
+      id="tooltip-notion"
+      role="tooltip"
+      class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+      Notion
+      <div class="tooltip-arrow" data-popper-arrow></div>
+    </div>
+
+    <div
+      id="tooltip-odoo"
+      role="tooltip"
+      class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+      Odoo
+      <div class="tooltip-arrow" data-popper-arrow></div>
+    </div>
+
+    <div
+      id="tooltip-heroku"
+      role="tooltip"
+      class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+      Heroku
+      <div class="tooltip-arrow" data-popper-arrow></div>
+    </div>
+
+    <div
+      id="tooltip-vercel"
+      role="tooltip"
+      class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+      Vercel
+      <div class="tooltip-arrow" data-popper-arrow></div>
+    </div>
+
+    <div
+      id="tooltip-strapi"
+      role="tooltip"
+      class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+      Strapi
+      <div class="tooltip-arrow" data-popper-arrow></div>
+    </div>
+  </div>
+</div>
+
+<div class="mt-24">
+  <h2 class="text-center text-slate-500">Referenze</h2>
+  <div class="flex gap-8 md:gap-36 items-center justify-center mt-12 flex-wrap">
+    <Picture
+      src={Gmpro}
+      alt={"Gmpro"}
+      width={80}
+      height={100}
+      class="w-60px rounded transition group-hover:-translate-y-1 group-hover:shadow-xl bg-white object-cover object-center"
+    />
+    <Picture
+      src={Dpstudio}
+      alt={"Dpstudio"}
+      width={120}
+      height={120}
+      class="w-40px rounded transition group-hover:-translate-y-1 group-hover:shadow-xl bg-white object-cover object-center"
+    />
+
+    <Picture
+      src={ScuolaGuida}
+      alt={"ScuolaGuida"}
+      width={260}
+      height={220}
+      class="w-120px rounded transition group-hover:-translate-y-1 group-hover:shadow-xl bg-white object-cover object-center"
+    />
+    <Picture
+      src={Software}
+      alt={"Softwaregestionale"}
+      width={300}
+      height={100}
+      class="w-60px rounded transition group-hover:-translate-y-1 group-hover:shadow-xl bg-white object-cover object-center"
+    />
+
+  </div>
+  <div class="flex gap-8 md:gap-36 items-center justify-center mt-12 flex-wrap">
+    <Picture
+      src={Lusha}
+      alt={"Lusha"}
+      width={100}
+      height={140}
+      class="w-60px rounded transition group-hover:-translate-y-1 group-hover:shadow-xl bg-white object-cover object-center"
+    />
+    <Picture
+    src={Badilatti}
+    alt={"Badilatti"}
+    sizes="(max-width: 800px) 100vw, 200px"
+    width={80}
+    height={80}
+    class="w-100px rounded transition group-hover:-translate-y-1 group-hover:shadow-xl bg-white object-cover object-center "
+  />
+  </div>
+</div>
