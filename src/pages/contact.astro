@@ -9,35 +9,34 @@ import { Icon } from "astro-icon/components";
 <Layout title="Contact">
   <Container>
     <Sectionhead>
-      <Fragment slot="title">Contact</Fragment>
-      <Fragment slot="desc">We are a here to help.</Fragment>
+      <Fragment slot="title">Contattaci!</Fragment>
+      <Fragment slot="desc">Per qualsiasi progetto, richiesta di informazioni.</Fragment>
     </Sectionhead>
 
     <div class="grid md:grid-cols-2 gap-10 mx-auto max-w-4xl mt-16">
       <div>
-        <h2 class="font-medium text-2xl text-gray-800">Contact Astroship</h2>
+        <h2 class="font-medium text-2xl text-gray-800">Contatta Northsouth</h2>
         <p class="text-lg leading-relaxed text-slate-500 mt-3">
-          Have something to say? We are here to help. Fill up the form or send
-          email or call phone.
+          Un progetto digitale? Siamo qua per aiutare. Riempi il form, mandaci una mail o telefonaci direttamente.
         </p>
         <div class="mt-5">
           <div class="flex items-center mt-2 space-x-2 text-gray-600">
             <Icon class="text-gray-400 w-4 h-4" name="uil:map-marker" />
-            <span>1734 Sanfransico, CA 93063</span>
+            <span>Northsouth UX SAGL | 6900 Lugano</span>
           </div><div class="flex items-center mt-2 space-x-2 text-gray-600">
             <Icon class="text-gray-400 w-4 h-4" name="uil:envelope" /><a
               href="mailto:hello@astroshipstarter.com"
-              >hello@astroshipstarter.com</a
+              >info@north-south.nl</a
             >
           </div><div class="flex items-center mt-2 space-x-2 text-gray-600">
             <Icon class="text-gray-400 w-4 h-4" name="uil:phone" /><a
-              href="tel:+1 (987) 4587 899">+1 (987) 4587 899</a
+              href="tel:+41 78 246 28 45">+41 78 246 28 45</a
             >
           </div>
         </div>
       </div>
       <div>
-        <Contactform />
+        <iframe title="Contact Form" src="https://plugins.crisp.chat/urn:crisp.im:contact-form:0/contact/727a3632-d1bc-44a3-9179-65f86310a145" referrerpolicy="origin" sandbox="allow-forms allow-popups allow-scripts allow-same-origin" width="100%" height="600px" frameborder="0"></iframe>
       </div>
     </div>
   </Container>
