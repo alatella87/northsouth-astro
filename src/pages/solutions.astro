@@ -5,6 +5,24 @@ import Features from "../components/servizi.astro";
 import Hero from "@components/hero.astro";
 import Logos from "@components/logos.astro";
 import Layout from "@layouts/Layout.astro";
+
+const solutionServices = [
+  "Web",
+  "E-commerce",
+  "Frontend Development",
+  "Apps",
+  "SPA",
+  "CMS",
+  "ERP",
+  "Hybrid apps development",
+  "Apple Store Publishing",
+  "Play Store Publishing",
+  "Visual Design",
+  "Design Systems",
+  "Brand Design",
+  "Logo Design",
+  "Programmatic Ads",
+];
 ---
 
 <html>
@@ -48,30 +66,13 @@ import Layout from "@layouts/Layout.astro";
             Northsouth<span class="font-thin"> Solutions</span>
           </h4>
           <div class="mt-4">
-            <span
-              class="inline-flex items-center rounded-md bg-blue-50 px-4 py-1 mb-2 mr-2 text-sm font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10">
-              Web
-            </span>
-            <span
-              class="inline-flex items-center rounded-md bg-blue-50 px-4 py-1 mb-2 mr-2 text-sm font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10">
-              Web-apps
-            </span>
-            <span
-              class="inline-flex items-center rounded-md bg-blue-50 px-4 py-1 mb-2 mr-2 text-sm font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10">
-              Apps
-            </span>
-            <span
-              class="inline-flex items-center rounded-md bg-blue-50 px-4 py-1 mb-2 mr-2 text-sm font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10">
-              E-Commerce
-            </span>
-            <span
-              class="inline-flex items-center rounded-md bg-blue-50 px-4 py-1 mb-2 mr-2 text-sm font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10">
-              CMS
-            </span>
-            <span
-              class="inline-flex items-center rounded-md bg-blue-50 px-4 py-1 mb-2 mr-2 text-sm font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10">
-              ERP
-            </span>
+            {
+              solutionServices.map((item) => (
+                <span class="inline-flex items-center rounded-md bg-blue-50 px-4 py-1 mb-2 mr-2 text-sm font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10">
+                  {item}
+                </span>
+              ))
+            }
           </div>
           <p>
             Offriamo una vasta gamma di <b>servizi digitali</b> per aiutare la tua

@@ -8,6 +8,14 @@ module.exports = {
       colors: {
         'northsouth': '#4f46e5',
       },
+      animation: {
+        marquee: "marquee var(--duration, 30s) linear infinite",
+      },
+      keyframes: {
+        marquee: {
+          to: { transform: "translateX(-50%)" },
+        },
+      },
       fontFamily: {
         sans: [
           "Bricolage Grotesque Variable",
