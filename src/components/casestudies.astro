@@ -1,106 +1,116 @@
 ---
 // @ts-ignore
 import Link from "./ui/link.astro";
-import software from "../assets/software.png";
-import gmpro from "../assets/gmpro.png";
-import badilatti from "../assets/badilatti.png";
-import scuolaguida from "../assets/scuolaguida.png";
-import lusha from "../assets/lusha.png";
+import software from "../assets/thumbsHome/softwaregestionale.webp";
+import gmpro from "../assets/thumbsHome/gmpro.webp";
+import badilatti from "../assets/thumbsHome/badilatti.webp";
+import scuolaguida from "../assets/thumbsHome/scuolaguidalugano.webp";
+import farmatouch from "../assets/thumbsHome/farmatouch.webp";
+import naranja from "../assets/thumbsHome/naranja.webp";
+import sepoy from "../assets/thumbsHome/sepoy.webp";
+import whirlpool from "../assets/thumbsHome/whirlpool.webp";
 
 const caseStudies = [
   {
-    company: "softwaregestionale.ch",
-    services: [
-      "solutions",
-      "strategy"
-    ],
-    title: "DPStudio si affida a Northsouth per landings",
-    description: "Nuovo funnel, SaaS landing page per pagina di presentazione gestionale softwaregestionale.ch",
-    picture: software
+    company: "Caffé Badilatti",
+    services: ["UX/UI design", "E-Commmerce"],
+    description:
+      "Eseguito un rinnovamento UX/UI della piattaforma e-commerce per un marchio di caffè svizzero premium. Allineato il design con l'identità del marchio e affrontato le esigenze specifiche degli utenti.",
+    picture: badilatti,
   },
   {
-    company: "Caffé Badilatti",
-    services: [
-      "strategy"
-    ],
-    title: "Caffe Badilatti UX E-Commerce redesign",
-    description: "Redesign UX/UI di e-commerce badilatti su base di documentazione brand identity e richieste specifiche. ",
-    picture: badilatti
+    company: "DPStudio",
+    services: ["UX/UI design", "Visual identity"],
+    description:
+      "Sviluppato un nuovo funnel e una landing page SaaS per softwaregestionale.ch, una piattaforma di gestione software che serve piccole e medie imprese nella Svizzera italiana.",
+    picture: software,
+  },
+  {
+    company: "Farmatouch",
+    services: ["soluzioni", "conoscenza"],
+    description:
+      "Progettata la piattaforma di acquisto di farmaci per un'app farmaceutica, semplificando l'interfaccia, aggiornando la tecnologia e migliorando l'esperienza utente.",
+    picture: farmatouch,
+  },
+  {
+    company: "Naranja",
+    services: ["soluzioni", "conoscenza"],
+    description:
+      "Progettato un sito e-commerce per una banca innovativa, migliorando la navigazione, stabilendo una nuova identità visiva, migliorando l'esperienza utente e semplificando il checkout con migliori opzioni di spedizione e pagamento.",
+    picture: naranja,
+  },
+  {
+    company: "Sepoy",
+    services: ["soluzioni", "conoscenza"],
+    description:
+      "Rinnovato il sito web per un'azienda specializzata in interfacce Magento scalabili ottimizzate per la conversione. Migliorata l'esperienza utente e mostrati i servizi del cliente con un design moderno.",
+    picture: sepoy,
+  },
+  {
+    company: "Whirlpool",
+    services: ["soluzioni", "conoscenza"],
+    description:
+      "Ridisegnato il sito e-commerce per un leader globale negli elettrodomestici. Migliorata la navigazione utente, semplificati i flussi di lavoro e ottimizzati i processi di checkout.",
+    picture: whirlpool,
   },
   {
     company: "GMPro Gmbh",
-    services: [
-      "solutions",
-      "strategy"
-    ],
-    title: "GMPro: e-commerce da concezione a realizzazione",
-    description: "E-commerce con ERP integrato, brand identity e product design (AutoCAD) in 50gg.",
-    picture: gmpro
+    services: ["soluzioni", "strategia"],
+    description:
+      "Fornita una soluzione e-commerce completa con ERP integrato, identità del marchio completa e design del prodotto (AutoCAD) per un rivenditore di attrezzature per pizza di alta qualità entro 50 giorni.",
+    picture: gmpro,
   },
   {
     company: "Scuola Guida Lugano",
-    services: [
-      "solutions",
-      "strategy"
-    ],
-    title: "Redesign sito web, logo design, funnel social media e integrazione piattaforma booking",
-    description: "Redesign sito web, logo design, funnel social media e integrazione piattaforma booking. ",
-    picture: scuolaguida
+    services: ["soluzioni", "strategia"],
+    description:
+      "Ridisegnato il sito web, il logo e il funnel dei social media per una scuola guida in Svizzera. Integrata una nuova piattaforma di prenotazione per semplificare le interazioni degli utenti.",
+    picture: scuolaguida,
   },
-  {
-    company: "LUSHA GmbH",
-    services: [
-      "solutions",
-      "strategy"
-    ],
-    title: "Corporate Identity, logo, website, sales funnel",
-    description: "Redesign sito web, logo design, funnel social media e integrazione piattaforma booking. ",
-    picture: lusha
-  }
 ];
 
+// Go to /utils/translations for existing stubs
+
 ---
-<div class="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 mt-16 gap-16">
-  {caseStudies.map((study, index) => (
-    <div
-      class="mt-12 max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
-    >
-      <a href="#">
-        <img class="rounded-t-lg" src={study.picture.src} alt="" />
-      </a>
-      <div class="p-5">
+<div class="mt-24">
+<h1 class="text-center text-2xl text-black font-semibold">Lasciati ispirare</h1>
+<div class="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-16">
+  {
+    caseStudies.map((study, index) => (
+      <div class="mt-12 max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
         <a href="#">
-          <h5
-            class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
-          >
-            {study.title}
-          </h5>
+          <img class="rounded-t-lg" src={study.picture.src} alt="" />
         </a>
-        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
-          {study.description}
-        </p>
-        {study.services.map((service, index) => (
-          <a
-            href="#"
-            class=`inline-flex mr-2 items-center px-3 py-2 text-sm font-medium text-center text-white bg-${service} rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800`
-          >
-            {service}
+        <div class="p-5">
+          <a href="#">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+              {study.company}
+            </h5>
           </a>
-        ))}
+          <p class="mb-3 font-normal text-gray-500 dark:text-gray-400">
+            {study.description}
+          </p>
+          {study.services.map((service, index) => (
+            <a
+              href="#"
+              class={`inline-flex mr-2 items-center px-3 py-1 text-[14px] bg-black text-center text-white solutions rounded-sm focus:ring-4 `}>
+              {service}
+            </a>
+          ))}
+        </div>
       </div>
-    </div>
-  ))}
+    ))
+  }
 </div>
-
-
+</div>
 <style>
-.solutions {
-	background-color: black;
-}
-.strategy {
-	background-color: #4f46e5;
-}
-.knowledge {
-	background-color: #0900a6;
-}
+  .solutions {
+    background-color: black;
+  }
+  .strategy {
+    background-color: #4f46e5;
+  }
+  .knowledge {
+    background-color: #0900a6;
+  }
 </style>

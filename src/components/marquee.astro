@@ -1,0 +1,80 @@
+---
+import lyke from "@assets/lyke.png";
+import max from "@assets/max.png";
+import luigi from "@assets/luigi.png";
+
+const items = [
+  {
+    name: "Luca M.",
+    title: "Marketing Manager",
+    company: "dpstudio.ch",
+    services: "Solutions",
+    strategy: "Strategy",
+    image: lyke,
+    body: "Un servizio impeccabile: dall'idea al design, realizzazione rapida e su misura, con supporto continuo e senza intoppi.",
+  },
+  {
+    name: "Massimiliano G.",
+    title: "Owner ",
+    company: "gm-pro.ch",
+    services: "Solutions",
+    strategy: "Strategy",
+    image: max,
+    body: "Concezione e lancio e-commerce in 40gg. After sales 24h 7/7 sull'ERP prescelto. Un supporto continuo in tutte le situazioni.",
+  },
+  {
+    name: "Luigi F.",
+    title: "Owner",
+    company: "lusha-gmbh.ch",
+    services: "Solutions",
+    image: luigi,
+    body: "Grazie a Northsouth la mia presenza digitale è ora assicurata e seguita in modo professionale. Personal branding e content management incluso.",
+  },
+];
+---
+
+<div class="mt-24">
+  <h1 class="text-center text-2xl text-black font-semibold">Referenze</h1>
+</div>
+<div class="relative flex overflow-hidden py-16">
+  <div
+    class="flex w-max animate-marquee [--duration:100s] hover:[animation-play-state:paused]">
+    {
+      [...items, ...items].map((item, index) => (
+        <div class="h-full px-2.5">
+          <div class="relative h-full w-[28rem] rounded-2xl border border-black/5 bg-white/5 px-8 py-6">
+            <div class="pb-2 font-light text-black/75">{item.body}</div>
+            <div class="pb-2">
+              {item.services === "Solutions" && (
+                <span class="inline-flex items-center rounded-md bg-black px-2 py-1  mb-2 mr-2 text-xs font-medium text-white ring-1 ring-inset ring-blue-700/10">
+                  <span class="font-bold tracking-tight text-white dark:text-white">
+                    Northsouth
+                  </span>
+                  <span class="ml-1">{" " + item.services}</span>
+                </span>
+              )}
+              {item.strategy === "Strategy" && (
+                <span class="inline-flex items-center rounded-md bg-[#4f46e5] px-2 py-1  mb-2 mr-2 text-xs font-medium text-white ring-1 ring-inset ring-blue-700/10">
+                  <span class="font-bold tracking-tight text-white dark:text-white">
+                    Northsouth
+                  </span>
+                  <span class="ml-1">{" " + item.strategy}</span>
+                </span>
+              )}
+            </div>
+            <div class="mt-auto flex items-center gap-4">
+              <img src={item.image.src} class="h-12 w-12 rounded-full" />
+              <div class="flex flex-col text-sm">
+                <div class="text-black">{item.name}</div>
+                <div class="text-black/75">
+                  {" "}
+                  {item.title} |<span class="font-bold"> {item.company}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</div>

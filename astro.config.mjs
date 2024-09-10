@@ -12,7 +12,7 @@ import node from "@astrojs/node";
 // https://astro.build/config
 export default defineConfig({
   output: 'static',
-  site: 'https://www.north-south.eu',
+  site: 'https://north-south.eu',
   adapter: vercel(),
   integrations: [
     tailwind(),

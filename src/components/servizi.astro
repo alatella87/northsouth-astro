@@ -33,33 +33,28 @@ const features = [
 ];
 ---
 
-<!-- <div class="mt-16 md:mt-0">
-  <h2 class="text-2xl lg:text-3xl xl:text-4xl font-bold lg:tracking-tight">
-    Il tuo spazio cliente, on-demand.
-  </h2>
-  <p class="text-lg mt-4 text-slate-600">
-    Offriamo soluzioni on-demand. Quando vuoi tu, cliente.
-  </p>
-</div> -->
-<div class="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 mt-16 gap-16">
-  {
-    features.map((feature) => (
-      <a
-        style={{ backgroundColor: feature.color }}
-        href={ feature.link }
-        class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-500">
-        <h5 class="mb-2 text-2xl font-bold tracking-tight text-white dark:text-white">
-          Northsouth<span class="font-thin"> {feature.type}</span>
-        </h5>
-        <div class="my-4">
-          {feature.services.map((service) => (
-            <span class="inline-flex items-center rounded-md bg-blue-50 px-4 py-1 mb-2 mr-2 text-sm font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10">
-              {service}
-            </span>
-          ))}
-        </div>
-        <span class="text-gray-300">{feature.description}</span>
-      </a>
-    ))
-  }
+<div class="mt-24">
+  <h1 class="text-center text-2xl text-black font-semibold">Servizi</h1>
+  <div class="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 mt-8 gap-16">
+    {
+      features.map((feature) => (
+        <a
+          style={{ backgroundColor: feature.color }}
+          href={feature.link}
+          class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-500">
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-white dark:text-white">
+            Northsouth<span class="font-thin"> {feature.type}</span>
+          </h5>
+          <div class="my-4">
+            {feature.services.map((service) => (
+              <span class="inline-flex items-center rounded-md bg-blue-50 px-4 py-1 mb-2 mr-2 text-sm font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10">
+                {service}
+              </span>
+            ))}
+          </div>
+          <span class="text-gray-300">{feature.description}</span>
+        </a>
+      ))
+    }
+  </div>
 </div>

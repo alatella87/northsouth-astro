@@ -1,34 +1,13 @@
 ---
+// @ts-ignore
 import Container from "@components/container.astro";
 import Casestudies from "@components/casestudies.astro";
-import Servizi from "../components/servizi.astro";
+import Servizi from "@components/servizi.astro";
 import Hero from "@components/hero.astro";
 import Logos from "@components/logos.astro";
 import Layout from "@layouts/Layout.astro";
-const items = [
-  {
-    name: "Luca M.",
-    title: "Marketing Manager",
-    company: "dpstudio.ch",
-    image:
-      "https://media.licdn.com/dms/image/v2/C4D03AQGXDxXmkZuKWQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1564573830650?e=1729728000&v=beta&t=ZSnItxKBA8cE6nW52387Uo2z94dTGiE0uU6HrHGd93Y",
-    body: "Il team di Northsouth è una ventata di freschezza nel mondo della tech svizzera. Un approccio integrale alle soluzioni UX/Frontend.",
-  },
-  {
-    name: "Massimiliano G.",
-    title: "Owner ",
-    company: "gm-pro.ch",
-    image: "https://i.ibb.co/PGb8NYb/Screenshot-2024-08-22-at-14-15-09.png",
-    body: "Concezione e lancio e-commerce in 40gg. After sales 24h 7/7 sull'ERP prescelto. Un supporto continuo in tutte le situazioni.",
-  },
-  {
-    name: "Luigi F.",
-    title: "Owner",
-    company: "lusha-gmbh.ch",
-    image: "https://i.ibb.co/ysd6xDX/Screenshot-2024-08-22-at-14-32-15.png",
-    body: "Grazie a Northsouth la mia presenza digitale è ora assicurata e seguita in modo professionale. Personal branding e content management incluso.",
-  },
-];
+import Marquee from "@components/marquee.astro";
+import Form from "@components/form.astro";
 ---
 
 <html>
@@ -65,35 +44,10 @@ const items = [
   <Container>
     <Hero />
     <Servizi />
-    <div>
-      <div class="relative flex overflow-hidden py-16">
-        <div
-          class="flex w-max animate-marquee [--duration:40s] hover:[animation-play-state:paused]">
-          {
-            [...items, ...items].map((item, index) => (
-              <div class="h-full px-2.5">
-                <div class="relative h-full w-[28rem] rounded-2xl border border-black/5 bg-white/5 px-8 py-6">
-                  <div class="pb-4 font-light text-black/75">{item.body}</div>
-                  <div class="mt-auto flex items-center gap-4">
-                    <img src={item.image} class="h-12 w-12 rounded-full" />
-                    <div class="flex flex-col text-sm">
-                      <div class="text-black">{item.name}</div>
-                      <div class="text-black/75">
-                        {" "}
-                        {item.title} |
-                        <span class="font-bold"> {item.company}</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))
-          }
-        </div>
-      </div>
-    </div>
     <Logos />
     <Casestudies />
+    <Marquee />
+    <Form />
   </Container>
 </Layout>
 
@@ -102,7 +56,7 @@ const items = [
     background: linear-gradient(to right, rgb(255, 0, 0), transparent 90%);
   }
   .animate-marquee {
-    animation-delay: 2s;
+    animation-delay: 1s;
   }
 </style>
 
