@@ -1,7 +1,7 @@
 ---
 draft: false
 name: "Mariano Zunini"
-title: "CXO | E-Commerce Expert"
+title: "CXO | Esperto E-Commerce"
 avatar: {
     src: "https://i.ibb.co/7pgM8pX/zunini.png",
     alt: "Mariano Zunini"

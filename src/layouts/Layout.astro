@@ -20,7 +20,7 @@ const { title } = Astro.props;
 
 const makeTitle = title
   ? title + " | " + "Northsouth - Soluzioni digitali a 360 gradi"
-  : "Northsouth - Home - Soluzioni digitali a 360 gradi";
+  : "Northsouth - Soluzioni digitali a 360 gradi";
 ---
 
 <!DOCTYPE html>
@@ -30,18 +30,11 @@ const makeTitle = title
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <script is:inline src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
-
     <!-- <link rel="preload" as="image" href={src} alt="Hero" /> -->
     <SEO
       title={makeTitle}
       description="Northsouth offre soluzioni digitali complete e innovative per il successo del tuo business, dall'analisi strategica allo sviluppo tecnologico su misura."
       canonical={canonicalURL}
-      twitter={{
-        creator: "@surjithctly",
-        site: "@web3templates",
-        card: "summary_large_image",
-      }}
       openGraph={{
         basic: {
           url: canonicalURL,
@@ -50,7 +43,7 @@ const makeTitle = title
           image: resolvedImageWithDomain,
         },
         image: {
-          alt: "Astroship Homepage Screenshot",
+          alt: "Northsouth - Soluzioni digitali a 360 gradi",
         },
       }}
     />

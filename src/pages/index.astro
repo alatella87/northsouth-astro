@@ -8,6 +8,7 @@ import Logos from "@components/logos.astro";
 import Layout from "@layouts/Layout.astro";
 import Marquee from "@components/marquee.astro";
 import Form from "@components/form.astro";
+import Team from "@components/team.astro";
 ---
 
 <html>
@@ -40,17 +41,17 @@ import Form from "@components/form.astro";
   </head>
 </html>
 
-<Layout title="">
+<Layout title="Northsouth - Soluzioni digitali a 360 gradi">
   <Container>
     <Hero />
     <Servizi />
-    <Logos />
     <Casestudies />
     <Marquee />
     <Form />
+    <Logos />
+    <Team />
   </Container>
 </Layout>
-
 <style>
   .gradient {
     background: linear-gradient(to right, rgb(255, 0, 0), transparent 90%);

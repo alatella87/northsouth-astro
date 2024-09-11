@@ -73,26 +73,30 @@ const caseStudies = [
 
 ---
 <div class="mt-24">
-<h1 class="text-center text-2xl text-black font-semibold">Lasciati ispirare</h1>
+  <div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
+    <h2
+      class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">
+      Lasciati ispirare
+    </h2>
+    <p
+      class="font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">
+      I nostri case studies rappresentano il lavoro svolto dalla nostra consulenza digitale, mostrando come abbiamo aiutato diverse aziende a migliorare l'esperienza utente, ottimizzare i processi di checkout e sviluppato soluzioni digitali complete. Siamo orgogliosi di condividere i nostri successi e di dimostrare il nostro impegno nel fornire servizi di alta qualità ai nostri clienti.
+    </p>
+  </div>
 <div class="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-16">
   {
     caseStudies.map((study, index) => (
-      <div class="mt-12 max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-        <a href="#">
+      <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 place-self-center">
           <img class="rounded-t-lg" src={study.picture.src} alt="" />
-        </a>
         <div class="p-5">
-          <a href="#">
             <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
               {study.company}
             </h5>
-          </a>
           <p class="mb-3 font-normal text-gray-500 dark:text-gray-400">
             {study.description}
           </p>
           {study.services.map((service, index) => (
             <a
-              href="#"
               class={`inline-flex mr-2 items-center px-3 py-1 text-[14px] bg-black text-center text-white solutions rounded-sm focus:ring-4 `}>
               {service}
             </a>
