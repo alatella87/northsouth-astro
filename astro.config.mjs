@@ -14,6 +14,10 @@ export default defineConfig({
   output: 'static',
   site: 'https://north-south.eu',
   adapter: vercel(),
+  i18n: {
+    defaultLocale: "it",
+    locales: ["fr", "it"],
+  },
   integrations: [
     tailwind(),
     mdx(),
@@ -24,5 +28,6 @@ export default defineConfig({
       }
     }),
     icon(),
+    
   ]
 });
