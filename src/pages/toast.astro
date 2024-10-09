@@ -1,0 +1,28 @@
+---
+import Container from "@components/container.astro";
+import Layout from "@layouts/Layout.astro";
+---
+
+<html>
+  <head>
+    <meta name="title" content="Toast's mailchimp test"/>
+    <meta
+      name="description"
+      content="Just a test for Toast."
+    />
+    <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/ae15d5bccd28151ab8dcbcf44/46254eee27fba2f445e20116d.js");</script>
+  </head>
+</html>
+
+<Layout title="Toast's toast">
+  <Container>
+    <div class="min-h-[calc(100vh-16rem)] flex items-center justify-center">
+      <div class="mt-16 text-center">
+        <h1 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">Toast pop-up</h1>
+        <p class="text-lg mt-4 text-slate-600">via mailchimp</p>
+      </div>
+    </div>
+  </Container>
+</Layout>
+
+
