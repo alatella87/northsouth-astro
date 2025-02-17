@@ -3,58 +3,86 @@ import Container from "@components/container.astro";
 import Link from "@components/ui/link.astro";
 import Dropdown from "./dropdown.astro";
 import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+// Function to construct the new path based on the selected language
+function constructLanguagePath(currentPath, languageCode) {
+  // Remove the current language code from the path
+  const pathWithoutLanguage = currentPath.replace(/^\/[a-z]{2}\//, '/');
+
+  // Construct the new path with the selected language code
+  const newPath = languageCode ? `/${languageCode}${pathWithoutLanguage}` : pathWithoutLanguage;
+
+  return newPath;
+}
+
+const currentPath = Astro.url.pathname; // Get the current path
 
 const menuitems = [
-  // {
-  //   title: "Features",
-  //   path: "#",
-  //   children: [
-  //     { title: "Action", path: "/" },
-  //     { title: "Another action", path: "#" },
-  //     { title: "Dropdown Submenu", path: "#" },
-  //     { title: "404 Page", path: "/404" },
-  //   ],
-  // },
-  // {
-  //   title: "Pricing",
-  //   path: "/pricing",
-  // },
   {
     title: "Home",
-    path: "/",
-  },
-  // {
-  //   title: "Blog",
-  //   path: "/blog",
-  // },
-  {
-    title: "Contatto",
-    path: "/contatto",
+    path: lang === 'fr' ? '/fr' : '/',
   },
   {
-    title: "About",
-    path: "/about",
+    title: t("nav.team"),
+    path: lang === 'fr' ? '/fr/team' : '/team',
   },
-  // {
-  //   title: "Pro Version",
-  //   badge: true,
-  //   path: "https://astroship-pro.web3templates.com/",
-  // },
 ];
+
+const servicesDropdown = [
+  {
+    title: "Services",
+    path: "#",
+    children: [
+      { title: t("nav.services.solutions"), path: lang === 'fr' ? '/fr/solutions' : '/solutions' },
+      { title: t("nav.services.knowledge"), path: lang === 'fr' ? '/fr/knowledge' : '/knowledge' },
+      { title: t("nav.services.strategy"), path: lang === 'fr' ? '/fr/strategy' : '/strategy' },
+    ],
+  },
+];
+
+const languageDropdown = [
+  {
+    title: "Language",
+    path: "#",
+    children: [
+      { title: "IT", path: constructLanguagePath(currentPath, '') }, // Default language (Italian)
+      { title: "FR", path: constructLanguagePath(currentPath, 'fr') },
+    ],
+  },
+];
+
+
 ---
 
 <Container>
-  <header class="flex flex-col lg:flex-row justify-start items-center my-5">
+  <header class="flex flex-col lg:flex-row justify-between items-center my-5">
     <Astronav>
       <div class="flex w-full lg:w-auto items-center justify-between">
         <div class="block lg:hidden">
           <MenuIcon class="w-4 h-4 text-gray-800" />
         </div>
       </div>
-      <MenuItems class="hidden w-full lg:w-auto mt-2 lg:flex lg:mt-0">
-        <ul class="flex flex-col lg:flex-row lg:gap-3">
+      <MenuItems class="flex flex-row w-full lg:w-auto mt-2 lg:flex lg:mt-0 justify-between">
+        <ul class="flex flex-col lg:flex-row">
           {
             menuitems.map((item, index) => (
+              <li key={index}>
+                <a
+                  href={item.path}
+                  class="flex lg:px-3 py-2 items-center text-gray-600 hover:text-gray-900">
+                  <span> {item.title}</span>
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+        <ul class="flex flex-col lg:flex-row lg:gap-3 ml-auto">
+          {
+            servicesDropdown.map((item, index) => (
               <>
                 {item.children && (
                   <Dropdown
@@ -63,37 +91,27 @@ const menuitems = [
                     lastItem={index === menuitems.length - 1}
                   />
                 )}
-
-                {!item.children && (
-                  <li>
-                    <a
-                      href={item.path}
-                      class="flex lg:px-3 py-2 items-center text-gray-600 hover:text-gray-900">
-                      <span> {item.title}</span>
-                      {item.badge && (
-                        <span class="ml-1 px-2 py-0.5 text-[10px] animate-pulse font-semibold uppercase text-white bg-indigo-600 rounded-full">
-                          New
-                        </span>
-                      )}
-                    </a>
-                  </li>
+              </>
+            ))
+          }
+        </ul>
+        <ul class="flex flex-col lg:flex-row lg:gap-3 ml-auto">
+          {
+            languageDropdown.map((item, index) => (
+              <>
+                {item.children && (
+                  <Dropdown
+                    title={item.title}
+                    children={item.children}
+                    lastItem={index === menuitems.length - 1}
+                  />
                 )}
               </>
             ))
           }
         </ul>
-        <!-- <div class="lg:hidden flex items-center mt-3 gap-4">
-          <Link href="#" style="muted" block size="md">Log in</Link>
-          <Link href="#" size="md" block>Sign up</Link>
-        </div> -->
       </MenuItems>
     </Astronav>
-    <!-- <div>
-      <div class="hidden lg:flex items-center gap-4">
-        <a href="#">Log in</a>
-        <Link href="#" size="md">Sign up</Link>
-      </div>
-    </div> -->
   </header>
 </Container>
 <style>
