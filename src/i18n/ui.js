@@ -30,7 +30,7 @@ export const ui = {
     // Service Tokens (actual services)
     'services.strategy.strategy': 'Strategia',
     'services.strategy.content': 'Contenuto',
-    'services.knowledge.knowledge-management': 'Knowledge Management',
+    'services.knowledge.knowledge-management': 'Knowledge Mgmt',
     'services.knowledge.workshops': 'Workshops',
 
     // Navbar / Page Header
