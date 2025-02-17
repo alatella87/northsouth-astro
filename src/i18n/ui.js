@@ -9,6 +9,7 @@ export const ui = {
   it: {
     // Misc
     "level": "Livello",
+    "form.title": "Form di contatto",
 
     // Navbar
     'nav.home': 'Home',
@@ -114,7 +115,8 @@ export const ui = {
     
     // Misc
     "level": "Niveau",
-    
+    "form.title": "Formulaire de contact",
+  
     // Navbar
     'nav.home': 'Accueil',
     'nav.team': 'Équipe',

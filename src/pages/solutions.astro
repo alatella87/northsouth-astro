@@ -1,9 +1,8 @@
 ---
 import Container from "@components/container.astro";
-import Casestudies from "@components/casestudies.astro";
-import Features from "../components/servizi.astro";
-import Hero from "@components/hero.astro";
-import Logos from "@components/logos.astro";
+import { getLangFromUrl, useTranslations } from "../i18n/utils"
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 import Layout from "@layouts/Layout.astro";
 
 const solutionServices = [
@@ -104,7 +103,7 @@ const solutionServices = [
       <div class="text-left my-24">
         <h4
           class="mb-2 text-2xl font-bold tracking-tight text-black dark:text-white">
-          <span class="font-thin">Formulario di contatto</span>
+          <span class="font-thin">{t('form.title')}</span>
         </h4>
         <iframe
           title="Contact Form"

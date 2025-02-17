@@ -13,7 +13,7 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
 import john from "@assets/john.png";
-import '../../styles/global.css';
+import "../../styles/global.css";
 
 // Get team members as before
 const publishedTeamMembers = await getCollection("team", ({ data }) => {
@@ -59,9 +59,7 @@ const steps = [
     id: 4,
     type: t("knowledge.steps.4.type"),
     definition: t("knowledge.steps.4.definition"),
-    internalTools: [
-      t("knowledge.steps.4.internalTools.0"),
-    ],
+    internalTools: [t("knowledge.steps.4.internalTools.0")],
     externalTools: t("knowledge.steps.4.externalTools"),
   },
   {
@@ -122,6 +120,7 @@ const features = [
   },
 ];
 ---
+
 <html lang={lang}>
   <head>
     <meta name="title" content="Northsouth - Solutions" />
@@ -142,29 +141,36 @@ const features = [
           <h2 class="text-base font-semibold leading-7 text-indigo-600">
             {t("knowledge.nav.services")}
           </h2>
-          <h4 class="mb-2 text-2xl font-bold tracking-tight text-black dark:text-white">
+          <h4
+            class="mb-2 text-2xl font-bold tracking-tight text-black dark:text-white">
             {t("knowledge.hero.title")}
           </h4>
 
           <div class="my-18 mb-10">
-            <h1 class="mb-4 text-2xl font-extrabold text-gray-900 dark:text-white md:text-3xl lg:text-4xl my-12">
-              <span class="text-transparent bg-clip-text bg-gradient-to-r to-blue-600 from-indigo-400">
+            <h1
+              class="mb-4 text-2xl font-extrabold text-gray-900 dark:text-white md:text-3xl lg:text-4xl my-12">
+              <span
+                class="text-transparent bg-clip-text bg-gradient-to-r to-blue-600 from-indigo-400">
                 {t("knowledge.mainTitle")}
               </span>
             </h1>
-            <p class="text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400 mt-12">
+            <p
+              class="text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400 mt-12">
               {t("knowledge.mainDescription")}
             </p>
           </div>
 
-          <h3 class="mb-2 text-1xl font-extrabold text-gray-900 dark:text-white md:text-2xl lg:text-3xl my-6">
-            <span class="text-transparent bg-clip-text bg-gradient-to-r to-blue-600 from-indigo-400">
+          <h3
+            class="mb-2 text-1xl font-extrabold text-gray-900 dark:text-white md:text-2xl lg:text-3xl my-6">
+            <span
+              class="text-transparent bg-clip-text bg-gradient-to-r to-blue-600 from-indigo-400">
               {t("knowledge.approachTitle")}
             </span>
           </h3>
           <div class="flex flex-row mt-4">
             <div>
-              <blockquote class="p-4 my-2 border-s-4 border-gray-300 bg-gray-50 dark:border-gray-500 dark:bg-gray-800">
+              <blockquote
+                class="p-4 my-2 border-s-4 border-gray-300 bg-gray-50 dark:border-gray-500 dark:bg-gray-800">
                 <p>{t("knowledge.approachQuote")}</p>
                 <img
                   class="inline-block size-[48px] rounded-full ring-2 ring-white mr-4 dark:ring-neutral-900"
@@ -177,87 +183,95 @@ const features = [
           </div>
 
           <!-- Steps -->
-          <ol class="lg:flex items-center w-full space-y-4 lg:space-x-8 lg:space-y-0 mt-12 mb-18">
-            {steps.map((step) => (
-              <li class="flex-1 list-step min-h-[300px]">
-                <a
-                  href="https://pagedone.io/"
-                  class="border-l-2 flex flex-col border-t-0 pl-4 pt-0 border-solid border-indigo-600 font-medium lg:pt-4 lg:border-t-2 lg:border-l-0 lg:pl-0"
-                >
-                  <span class="text-sm lg:text-base text-indigo-600">
-                    Step {step.id}
-                  </span>
-                  <h4 class="text-base text-md text-gray-900">
-                    {step.type}
-                  </h4>
-                  <div class="text-sm font-thin mt-4 min-h-[130px]">
-                    {step.definition}
-                  </div>
-                </a>
-                <div class="mt-4">
-                  {step.internalTools.map((tool) => (
-                    <span class="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm dark:bg-blue-900 dark:text-blue-300">
-                      {tool}
+          <ol
+            class="lg:flex items-center w-full space-y-4 lg:space-x-8 lg:space-y-0 mt-12 mb-18">
+            {
+              steps.map((step) => (
+                <li class="flex-1 list-step min-h-[300px]">
+                  <a
+                    href="https://pagedone.io/"
+                    class="border-l-2 flex flex-col border-t-0 pl-4 pt-0 border-solid border-indigo-600 font-medium lg:pt-4 lg:border-t-2 lg:border-l-0 lg:pl-0">
+                    <span class="text-sm lg:text-base text-indigo-600">
+                      Step {step.id}
                     </span>
-                  ))}
-                </div>
-              </li>
-            ))}
+                    <h4 class="text-base text-md text-gray-900">{step.type}</h4>
+                    <div class="text-sm font-thin mt-4 min-h-[130px]">
+                      {step.definition}
+                    </div>
+                  </a>
+                  <div class="mt-4">
+                    {step.internalTools.map((tool) => (
+                      <span class="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm dark:bg-blue-900 dark:text-blue-300">
+                        {tool}
+                      </span>
+                    ))}
+                  </div>
+                </li>
+              ))
+            }
           </ol>
 
           <!-- Features (Niveaux d'analyse) -->
-          <h3 class="mb-4 text-1xl font-extrabold text-gray-900 dark:text-white md:text-2xl lg:text-3xl my-2">
-            <span class="text-transparent bg-clip-text bg-gradient-to-r to-blue-600 from-indigo-400">
+          <h3
+            class="mb-4 text-1xl font-extrabold text-gray-900 dark:text-white md:text-2xl lg:text-3xl my-2">
+            <span
+              class="text-transparent bg-clip-text bg-gradient-to-r to-blue-600 from-indigo-400">
               {t("knowledge.features.title")}
             </span>
           </h3>
-          <div class="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 mt-8 gap-16">
-            {features.map((feature) => (
-              <a
-                style={{ backgroundColor: feature.color }}
-                class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-500 place-self-center min-h-[400px] relative"
-              >
-                <div class="stripes">
-                  <div class="stripe" />
-                  <div class="stripe" />
-                  <div class="stripe" />
-                </div>
-                <h5 class="mb-2 text-base font-bold tracking-tight text-white dark:text-white">
-                  {t("knowledge.hero.title")}
-                </h5>
-                <h6 class="mb-2 text-1xl font-bold tracking-tight text-white dark:text-white">
-                  <span class="text-2xl font-bold">
-                    { t("level")} {feature.type}
-                  </span>
-                </h6>
-                <div class="my-4 mb-auto">
-                  {feature.services.map((service) => (
-                    <span class="inline-flex items-center rounded-md bg-blue-50 px-4 py-1 mb-2 mr-2 text-xxs font-xs text-blue-700 ring-1 ring-inset ring-blue-700/10">
-                      {service}
+          <div
+            class="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 mt-8 gap-16">
+            {
+              features.map((feature) => (
+                <a
+                  style={{ backgroundColor: feature.color }}
+                  class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-500 place-self-center min-h-[400px] relative">
+                  <div class="stripes">
+                    <div class="stripe" />
+                    <div class="stripe" />
+                    <div class="stripe" />
+                  </div>
+                  <h5 class="mb-2 text-base font-bold tracking-tight text-white dark:text-white">
+                    {t("knowledge.hero.title")}
+                  </h5>
+                  <h6 class="mb-2 text-1xl font-bold tracking-tight text-white dark:text-white">
+                    <span class="text-2xl font-bold">
+                      {t("level")} {feature.type}
                     </span>
-                  ))}
-                </div>
-                <span class="text-gray-300">{feature.description}</span>
-              </a>
-            ))}
+                  </h6>
+                  <div class="my-4 mb-auto">
+                    {feature.services.map((service) => (
+                      <span class="inline-flex items-center rounded-md bg-blue-50 px-4 py-1 mb-2 mr-2 text-xxs font-xs text-blue-700 ring-1 ring-inset ring-blue-700/10">
+                        {service}
+                      </span>
+                    ))}
+                  </div>
+                  <span class="text-gray-300">{feature.description}</span>
+                </a>
+              ))
+            }
           </div>
 
           <!-- CTA -->
           <div class="bg-white p-2 mt-32">
             <div class="max-w-xl mx-auto text-center">
-              <h2 class="text-gray-800 text-4xl font-extrabold relative after:absolute after:-bottom-5 after:h-1 after:w-1/2 after:bg-blue-600 after:left-0 after:right-0 after:mx-auto after:rounded-full">
+              <h2
+                class="text-gray-800 text-4xl font-extrabold relative after:absolute after:-bottom-5 after:h-1 after:w-1/2 after:bg-blue-600 after:left-0 after:right-0 after:mx-auto after:rounded-full">
                 {t("knowledge.cta.title")}
               </h2>
               <div class="mt-12">
                 <p class="text-gray-800 text-base"></p>
               </div>
               <div class="flex max-sm:flex-col justify-center gap-6 mt-12">
-                <button
-                  type="button"
-                  class="min-w-[140px] rounded px-4 py-2.5 text-sm tracking-wider font-semibold outline-none border text-white border-blue-600 bg-blue-600 hover:bg-transparent hover:text-blue-600 transition-all duration-300"
-                >
-                  {t("knowledge.cta.button")}
-                </button>
+                <iframe
+                  title="Contact Form"
+                  src="https://plugins.crisp.chat/urn:crisp.im:contact-form:0/contact/727a3632-d1bc-44a3-9179-65f86310a145"
+                  referrerpolicy="origin"
+                  sandbox="allow-forms allow-popups allow-scripts allow-same-origin"
+                  width="100%"
+                  height="1000px"
+                  frameborder="0">
+                </iframe>
               </div>
             </div>
           </div>
@@ -268,7 +282,8 @@ const features = [
             <h2 class="text-base font-semibold leading-7 text-indigo-600">
               {t("knowledge.tools.title")}
             </h2>
-            <div class="flex gap-8 md:gap-20 items-center justify-center mt-12 flex-wrap">
+            <div
+              class="flex gap-8 md:gap-20 items-center justify-center mt-12 flex-wrap">
               <Icon
                 data-tooltip-target="tooltip-notion"
                 class="size-8 md:size-8 hover:text-northsouth cursor-pointer"
