@@ -1,0 +1,91 @@
+---
+// @ts-ignore
+import Container from "@components/container.astro";
+import Casestudies from "@components/casestudies.astro";
+import Servizi from "@components/servizi.astro";
+import Hero from "@components/hero.astro";
+import Logos from "@components/logos.astro";
+import Layout from "@layouts/Layout.astro";
+import Marquee from "@components/marquee.astro";
+import Form from "@components/form.astro";
+import Team from "@components/team.astro";
+---
+
+<html>
+  <head>
+    <meta name="title" content="Northsouth - Soluzioni digitali a 360 gradi" />
+    <meta
+      name="description"
+      content="Northsouth offre soluzioni digitali complete e innovative per il successo del tuo business, dall'analisi strategica allo sviluppo tecnologico su misura."
+    />
+    <meta
+      name="keywords"
+      content="Soluzioni digitali,Innovazione tecnologica,Sviluppo software,Analisi strategica,Trasformazione digitale,Marketing digitale,Consulenza IT,E-commerce,Sviluppo web,Gestione progetti,UX/UI design,Digital strategy,Business digitale,Servizi IT,Tecnologia su misura"
+    />
+    <!-- OG Image -->
+    <meta property="og:image" content="https://i.ibb.co/w71YW8G/OG-Image.png" />
+    <meta name="robots" content="index, follow" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="language" content="English" />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JYJXYQEZ3Y"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-JYJXYQEZ3Y");
+    </script>
+  </head>
+</html>
+
+<Layout title="Northsouth - Soluzioni digitali a 360 gradi">
+  <Container>
+    <Hero />
+    <Servizi />
+    <Casestudies />
+    <Marquee />
+    <Form />
+    <Logos />
+    <Team />
+  </Container>
+</Layout>
+<style>
+  .gradient {
+    background: linear-gradient(to right, rgb(255, 0, 0), transparent 90%);
+  }
+  .animate-marquee {
+    animation-delay: 1s;
+  }
+</style>
+
+<script type="text/javascript">
+  var _iub = _iub || [];
+  _iub.csConfiguration = {
+    siteId: 3761573,
+    cookiePolicyId: 75940455,
+    lang: "it",
+  };
+</script>
+<script
+  type="text/javascript"
+  src="https://cs.iubenda.com/autoblocking/3761573.js"></script>
+<script
+  type="text/javascript"
+  src="//cdn.iubenda.com/cs/stable/iubenda_cs.js"
+  charset="UTF-8"
+  async></script>
+
+<script type="text/javascript">
+  window.$crisp = [];
+  window.CRISP_WEBSITE_ID = "727a3632-d1bc-44a3-9179-65f86310a145";
+  (function () {
+    d = document;
+    s = d.createElement("script");
+    s.src = "https://client.crisp.chat/l.js";
+    s.async = 1;
+    d.getElementsByTagName("head")[0].appendChild(s);
+  })();
+</script>

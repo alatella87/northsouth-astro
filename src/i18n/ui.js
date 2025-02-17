@@ -215,6 +215,109 @@ export const ui = {
     "knowledge.cta.button": "Réserver votre consultation",
     // Tools section
     "knowledge.tools.title": "Outils"
+  },
+  de: {
+    // Misc
+    "level": "Level",
+    "form.title": "Kontaktformular",
+
+    // Navbar
+    'nav.home': 'Startseite',
+    'nav.team': 'Team',
+    'nav.services.solutions': 'Northsouth Lösungen',
+    'nav.services.knowledge': 'Northsouth Wissen',
+    'nav.services.strategy': 'Northsouth Strategie',
+
+    // Hero
+    'hero.headline': 'Digitale Lösungen in 360 Grad.',
+    'hero.tagline': 'Northsouth fördert Ihre digitale Initiative, um Ihnen zu helfen, Ressourcen zu schonen.',
+
+    // Services
+    'services.title': 'Dienstleistungen',
+    'services.solutions.description': 'Wir entwickeln digitale Lösungen, die Ihren Bedürfnissen gerecht werden.',
+    'services.knowledge.description': 'Wir verwalten Ihr Wissen, um es zu einem strategischen Wert zu machen.',
+    'services.strategy.description': 'Wir analysieren Ihr Umfeld, um digitale Strategien zu entwickeln.',
+
+    // Service Tokens (actual services)
+    'services.strategy.strategy': 'Strategie',
+    'services.strategy.content': 'Inhalt',
+    'services.knowledge.knowledge-management': 'Wissensmanagement',
+    'services.knowledge.workshops': 'Workshops',
+
+    // Navbar / Page Header
+    "knowledge.nav.services": "Unsere Dienstleistungen",
+    "knowledge.hero.title": "Northsouth Wissen",
+    "knowledge.mainTitle": "Wissensmanagement",
+    "knowledge.mainDescription":
+      "Wissensmanagement ist ein systematischer Prozess der Akquisition, Strukturierung, Verwaltung und Verteilung von Wissen innerhalb einer Organisation. Es umfasst den Einsatz verschiedener Managementpraktiken und Technologien zur Förderung der Erstellung, des Teilens und der Nutzung von Wissen.",
+    // Approach
+    "knowledge.approachTitle": "Unser Ansatz",
+    "knowledge.approachQuote":
+      "Erfolgreiches Wissensmanagement vereint einen kollaborativen, menschenzentrierten Ansatz, eine intelligente technologische Integration, die durch reale Bedürfnisse geleitet wird, und eine nachhaltige Entwicklung von Wissen, das das Humankapital stärkt und die Leistung optimiert.",
+    "knowledge.approachBy": "Jonathan Wüthrich | Chief Knowledge Officer",
+    // Steps
+    "knowledge.steps.1.type": "Vorläufige Analyse",
+    "knowledge.steps.1.definition":
+      "Analyse des Unternehmensumfelds und seines Reifegrads im Wissensmanagement.",
+    "knowledge.steps.1.internalTools.0": "Umfragen",
+    "knowledge.steps.1.internalTools.1": "Interviews",
+    "knowledge.steps.1.internalTools.2": "Benchmarking",
+    "knowledge.steps.2.type": "Kartierung",
+    "knowledge.steps.2.definition":
+      "Interview mit dem Team; Kartierung von Wissen und Prozessen; Identifikation der Bedürfnisse.",
+    "knowledge.steps.2.internalTools.0": "Workshop",
+    "knowledge.steps.2.internalTools.1": "Interviews",
+    "knowledge.steps.2.internalTools.2": "Umfragen",
+    "knowledge.steps.2.internalTools.3": "Partizipative Workshops",
+    "knowledge.steps.2.externalTools": "Whimsical, Tally.so, Notion",
+    "knowledge.steps.3.type": "Strategie",
+    "knowledge.steps.3.definition":
+      "Co-Kreation der KM-Strategie und Prozesse mit den Mitarbeitenden; Ausrichtung auf die Unternehmensstrategie.",
+    "knowledge.steps.3.internalTools.0": "Workshop",
+    "knowledge.steps.3.internalTools.1": "Partizipative Workshops",
+    "knowledge.steps.3.externalTools": "Whimsical, Tally.so, Notion",
+    "knowledge.steps.4.type": "Implementierung",
+    "knowledge.steps.4.definition":
+      "Implementierung oder Anpassung des Mitarbeiterschulungswerkzeugs",
+    "knowledge.steps.4.internalTools.0": "Workshop",
+    "knowledge.steps.4.externalTools": "Notion, Make, n8n, Instruments AI",
+    "knowledge.steps.5.type": "Kontinuierliche Verbesserung",
+    "knowledge.steps.5.definition":
+      "Definition eines Prozesses zur Verbesserung und Aktualisierung des KM-Systems.",
+    "knowledge.steps.5.internalTools.0": "Umfragen",
+    "knowledge.steps.5.internalTools.1": "Interviews",
+    "knowledge.steps.5.internalTools.2": "Benchmarking",
+    "knowledge.steps.5.externalTools": "Notion, Make, n8n, Instruments AI",
+    // Features (Organizational Impact Levels)
+    "knowledge.features.title": "Organisatorische Auswirkungen",
+    "knowledge.features.1.type": "Strategisch",
+    "knowledge.features.1.description": "Wir helfen Ihnen, eine klare Vision für Ihr Wissensmanagement zu definieren, es mit der Unternehmensstrategie auszurichten, die notwendigen Ressourcen zuzuweisen und eine angemessene Governance umzusetzen.",
+    "knowledge.features.1.services.0": "Vision",
+    "knowledge.features.1.services.1": "Ziele",
+    "knowledge.features.1.services.2": "KPIs",
+    "knowledge.features.1.services.3": "Governance",
+    "knowledge.features.1.services.4": "Veränderung",
+    "knowledge.features.2.type": "Taktisch",
+    "knowledge.features.2.description":
+      "Wir helfen Ihnen, Ihre Prozesse mitzugestalten, das Teamengagement zu fördern und eine angemessene Schulung umzusetzen.",
+    "knowledge.features.2.services.0": "Ko-Kreation",
+    "knowledge.features.2.services.1": "Prozesse",
+    "knowledge.features.2.services.2": "Workshops",
+    "knowledge.features.2.services.3": "Training",
+    "knowledge.features.2.services.4": "Kapitalisierung",
+    "knowledge.features.3.type": "Operativ",
+    "knowledge.features.3.description":
+      "Wir helfen Ihnen, einen aktiven Beitrag zur Wissensdatenbank zu leisten, den Einsatz der Tools zu optimieren und die Prozesse kontinuierlich zu verbessern.",
+    "knowledge.features.3.services.0": "Beitrag",
+    "knowledge.features.3.services.1": "Teilen",
+    "knowledge.features.3.services.2": "Verbesserung",
+    "knowledge.features.3.services.3": "Feedback",
+    // CTA
+    "knowledge.cta.title":
+      "Bereit, das Wissensmanagement Ihrer Organisation zu optimieren?",
+    "knowledge.cta.button": "Buchen Sie Ihre Beratung",
+    // Tools section
+    "knowledge.tools.title": "Tools"
   }
 };
 
