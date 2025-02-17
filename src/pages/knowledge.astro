@@ -1,11 +1,8 @@
 ---
-import { getCollection } from "astro:content";
 import Container from "@components/container.astro";
-import Casestudies from "@components/casestudies.astro";
-import Hero from "@components/hero.astro";
-import Logos from "@components/logos.astro";
 import Layout from "@layouts/Layout.astro";
 import { Icon } from "astro-icon/components";
+import ogImage from '@assets/og-km.jpg'
 
 import { getLangFromUrl, useTranslations } from "../i18n/utils";
 
@@ -15,12 +12,8 @@ const t = useTranslations(lang);
 import john from "@assets/john.png";
 import '../styles/global.css';
 
-// Get team members as before
-const publishedTeamMembers = await getCollection("team", ({ data }) => {
-  return !data.draft && data.publishDate < new Date();
-});
 
-// Instead of hardcoding text in our steps array, we now use translation keys
+
 const steps = [
   {
     id: 1,
@@ -125,7 +118,8 @@ const features = [
 
 <html lang={lang}>
   <head>
-    <meta name="title" content="Northsouth - Solutions" />
+    <meta name="title" content="Northsouth - Knowledge Management" />
+    <meta property="og:image" content="https://north-south.eu/og-km.jpg" />
     <meta charset="UTF-8" />
     <meta
       name="description"
