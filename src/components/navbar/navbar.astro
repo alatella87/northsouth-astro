@@ -8,49 +8,87 @@ import { getLangFromUrl, useTranslations } from "../../i18n/utils";
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
-// Function to construct the new path based on the selected language
-function constructLanguagePath(currentPath, languageCode) {
-  // Remove the current language code from the path
-  const pathWithoutLanguage = currentPath.replace(/^\/[a-z]{2}\//, '/');
-
-  // Construct the new path with the selected language code
-  const newPath = languageCode ? `/${languageCode}${pathWithoutLanguage}` : pathWithoutLanguage;
-
-  return newPath;
-}
-
-const currentPath = Astro.url.pathname; // Get the current path
+// Get the current path from the URL
+const currentPath = Astro.url.pathname;
 
 const menuitems = [
   {
-    title: "Home",
-    path: lang === 'fr' ? '/fr' : '/',
+    title: t("nav.home"),
+    path: lang === 'it' ? '/' : `/${lang}`,
   },
   {
     title: t("nav.team"),
-    path: lang === 'fr' ? '/fr/team' : '/team',
+    path: lang === 'it' ? '/team' : `/${lang}/team`,
+  },
+  {
+    title: t("nav.casestudies"),
+    path: lang === 'it' ? '/casestudies' : `/${lang}/casestudies`,
   },
 ];
 
 const servicesDropdown = [
   {
-    title: "Services",
+    title: t("services.title"),
     path: "#",
     children: [
-      { title: t("nav.services.solutions"), path: lang === 'fr' ? '/fr/solutions' : '/solutions' },
-      { title: t("nav.services.knowledge"), path: lang === 'fr' ? '/fr/knowledge' : '/knowledge' },
-      { title: t("nav.services.strategy"), path: lang === 'fr' ? '/fr/strategy' : '/strategy' },
+      { 
+        title: t("nav.services.solutions"), 
+        path: lang === 'it' ? '/solutions' : `/${lang}/solutions` 
+      },
+      { 
+        title: t("nav.services.knowledge"), 
+        path: lang === 'it' ? '/knowledge' : `/${lang}/knowledge` 
+      },
+      { 
+        title: t("nav.services.strategy"), 
+        path: lang === 'it' ? '/strategy' : `/${lang}/strategy` 
+      },
     ],
   },
 ];
 
+// Get current language code in uppercase for display
+const currentLangDisplay = lang === 'it' ? 'IT' : lang.toUpperCase();
+
+// Function to get proper paths for each language
+function getLanguagePaths() {
+  // Extract the page name without language prefix
+  let pathParts = currentPath.split('/').filter(Boolean);
+  let pageName = pathParts.length > 0 && /^[a-z]{2}$/.test(pathParts[0]) 
+    ? pathParts.slice(1).join('/') 
+    : pathParts.join('/');
+    
+  // Handle root path specially
+  if (!pageName) {
+    return {
+      it: '/',
+      en: '/en',
+      fr: '/fr',
+      de: '/de'
+    };
+  }
+  
+  // For other pages
+  return {
+    it: `/${pageName}`,
+    en: `/en/${pageName}`,
+    fr: `/fr/${pageName}`,
+    de: `/de/${pageName}`
+  };
+}
+
+// Get paths for each language
+const languagePaths = getLanguagePaths();
+
 const languageDropdown = [
   {
-    title: "Language",
+    title: `Language (${currentLangDisplay})`,
     path: "#",
     children: [
-      { title: "IT", path: constructLanguagePath(currentPath, '') }, // Default language (Italian)
-      { title: "FR", path: constructLanguagePath(currentPath, 'fr') },
+      { title: "EN", path: languagePaths.en },
+      { title: "FR", path: languagePaths.fr },
+      { title: "IT", path: languagePaths.it },
+      { title: "DE", path: languagePaths.de },
     ],
   },
 ];

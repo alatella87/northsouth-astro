@@ -6,10 +6,14 @@ import Badilatti from "assets/thumbsHome/badilatti.webp";
 import Gmpro from "assets/thumbsHome/gmpro.webp";
 import ScuolaGuida from "assets/thumbsHome/scuolaguidalugano.webp";
 import Software from "assets/thumbsHome/softwaregestionale.webp";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <div class="mt-24">
-  <h1 class="text-center text-2xl text-black font-semibold">Strumenti</h1>
+  <h1 class="text-center text-2xl text-black font-semibold">{t("tools.title")}</h1>
   <div class="flex gap-8 md:gap-20 items-center justify-center mt-12 flex-wrap">
     <Icon
       data-tooltip-target="tooltip-react"

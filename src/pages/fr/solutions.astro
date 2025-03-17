@@ -1,9 +1,8 @@
 ---
 import Container from "@components/container.astro";
-import Casestudies from "@components/casestudies.astro";
-import Features from "../components/servizi.astro";
-import Hero from "@components/hero.astro";
-import Logos from "@components/logos.astro";
+import { getLangFromUrl, useTranslations } from "../../i18n/utils"
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 import Layout from "@layouts/Layout.astro";
 
 const solutionServices = [
@@ -30,17 +29,17 @@ const solutionServices = [
     <meta name="title" content="Northsouth - Solutions" />
     <meta
       name="description"
-      content="Northsouth offre soluzioni digitali complete e innovative per il successo del tuo business, dall'analisi strategica allo sviluppo tecnologico su misura."
+      content="Northsouth offre des solutions numériques complètes et innovantes pour le succès de votre entreprise, de l'analyse stratégique au développement technologique sur mesure."
     />
     <meta
       name="keywords"
-      content="Soluzioni digitali,Innovazione tecnologica,Sviluppo software,Analisi strategica,Trasformazione digitale,Marketing digitale,Consulenza IT,E-commerce,Sviluppo web,Gestione progetti,UX/UI design,Digital strategy,Business digitale,Servizi IT,Tecnologia su misura"
+      content="Solutions numériques,Innovation technologique,Développement logiciel,Analyse stratégique,Transformation numérique,Marketing digital,Conseil informatique,E-commerce,Développement web,Gestion de projets,Design UX/UI,Stratégie digitale,Business numérique,Services IT,Technologie sur mesure"
     />
     <!-- OG Image -->
     <meta property="og:image" content="https://i.ibb.co/w71YW8G/OG-Image.png" />
     <meta name="robots" content="index, follow" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="language" content="English" />
+    <meta name="language" content="French" />
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-JYJXYQEZ3Y"
     ></script>
@@ -62,14 +61,13 @@ const solutionServices = [
       <div>
         <div class="text-left my-24">
           <h2 class="text-base font-semibold leading-7 text-indigo-600">
-            I nostri servizi</h2>
+            {t('solutions.title')}</h2>
           <h4
             class="mb-2 text-2xl font-bold tracking-tight text-black dark:text-white">
             Northsouth<span class="font-thin"> Solutions</span>
           </h4>
           <p>
-            La divisione <span class="mb-2 font-bold tracking-tight text-black dark:text-white">Northsouth</span><span class="font-thin"> Solutions</span> offre una vasta gamma di servizi digitali per aiutare la tua
-            azienda a crescere.
+            <span class="mb-2 font-bold tracking-tight text-black dark:text-white">Northsouth</span><span class="font-thin"> Solutions</span> {t('solutions.division')}
           </p>
           <div class="mt-4" style="padding-top: 12px;">
             {
@@ -82,29 +80,20 @@ const solutionServices = [
           </div>
 
           <p>
-            Dallo sviluppo di siti web e apps personalizzate, alla gestione di
-            progetti di trasformazione digitale, al marketing digitale e alla
-            consulenza IT, siamo qui per supportarti in ogni fase del tuo
-            percorso digitale.
+            {t('solutions.paragraph1')}
           </p>
           <p>
-            Siamo appassionati di tecnologia e ci impegniamo a offrire soluzioni
-            innovative e di alta qualità che soddisfino le tue esigenze
-            specifiche.
+            {t('solutions.paragraph2')}
           </p>
           <p>
-            Contattaci oggi stesso per scoprire come possiamo aiutarti a
-            raggiungere i tuoi obiettivi digitali.
+            {t('solutions.paragraph3')}
           </p>
         </div>
-      </div>
-      <div>
-        Some
       </div>
       <div class="text-left my-24">
         <h4
           class="mb-2 text-2xl font-bold tracking-tight text-black dark:text-white">
-          <span class="font-thin">Formulario di contatto</span>
+          <span class="font-thin">{t('form.title')}</span>
         </h4>
         <iframe
           title="Contact Form"

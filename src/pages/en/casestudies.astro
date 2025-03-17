@@ -1,0 +1,100 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+import { Picture } from "astro:assets";
+
+// Import translations
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
+import { defaultLang } from "../../i18n/ui";
+
+// Get current language
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+// Get case studies from content collection based on language
+const allCaseStudies = await getCollection("casestudies", ({ data }) => !data.draft);
+
+// Group case studies by slug (without language prefix)
+const caseStudiesBySlug = {};
+
+allCaseStudies.forEach(entry => {
+  const [entryLang, baseSlug] = entry.slug.split('/');
+  if (!baseSlug) return;
+  
+  if (!caseStudiesBySlug[baseSlug]) {
+    caseStudiesBySlug[baseSlug] = {};
+  }
+  
+  caseStudiesBySlug[baseSlug][entryLang] = entry;
+});
+
+// Select the appropriate language version for each case study
+const caseStudies = Object.entries(caseStudiesBySlug).map(([slug, entries]) => {
+  return entries[lang] || entries[defaultLang] || Object.values(entries)[0];
+});
+---
+
+<Layout title="Case Studies">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">
+        {lang === 'it' ? 'Case Studies' :
+         lang === 'en' ? 'Case Studies' :
+         lang === 'fr' ? 'Études de cas' :
+         lang === 'de' ? 'Fallstudien' : 'Case Studies'}
+      </Fragment>
+      <Fragment slot="desc">
+        {lang === 'it' ? 'Scopri come abbiamo aiutato le aziende a trasformare la loro presenza digitale' :
+         lang === 'en' ? 'See how we\'ve helped businesses transform their digital presence' :
+         lang === 'fr' ? 'Découvrez comment nous avons aidé les entreprises à transformer leur présence numérique' :
+         lang === 'de' ? 'Sehen Sie, wie wir Unternehmen geholfen haben, ihre digitale Präsenz zu transformieren' :
+         'Scopri come abbiamo aiutato le aziende a trasformare la loro presenza digitale'}
+      </Fragment>
+    </Sectionhead>
+    
+    <div class="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-16 mt-16">
+      {
+        caseStudies.map((study) => (
+          <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 place-self-center">
+            <a href={`/en/casestudies/${study.slug.split('/')[1]}`}>
+              <Picture 
+                src={study.data.image.src} 
+                alt={study.data.image.alt}
+                width={400}
+                height={300}
+                class="rounded-t-lg w-full object-cover"
+              />
+              <div class="p-5">
+                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                  {study.data.company}
+                </h5>
+                <p class="mb-3 font-normal text-gray-500 dark:text-gray-400">
+                  {study.data.snippet}
+                </p>
+                {study.data.services.map((service) => (
+                  <span class="inline-flex mr-2 items-center px-3 py-1 text-[14px] bg-black text-center text-white solutions rounded-sm focus:ring-4">
+                    {service}
+                  </span>
+                ))}
+              </div>
+            </a>
+          </div>
+        ))
+      }
+    </div>
+  </Container>
+</Layout>
+
+<style>
+  .solutions {
+    background-color: black;
+  }
+  .strategy {
+    background-color: #4f46e5;
+  }
+  .knowledge {
+    background-color: #0900a6;
+  }
+</style>

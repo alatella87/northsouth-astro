@@ -2,6 +2,10 @@
 import lyke from "@assets/lyke.png";
 import max from "@assets/max.png";
 import luigi from "@assets/luigi.png";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <div class="text-left mt-16 mb-4">
@@ -9,12 +13,11 @@ import luigi from "@assets/luigi.png";
     <div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
       <h2
         class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">
-        Contattaci
+        {t("contactpage.title")}
       </h2>
       <p
         class="font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">
-        Saremo lieti di ricevere ed analizzare la vostra richiesta di
-        informazioni, proposta digitale o domanda tecnica.
+        {t("contactpage.description")}
       </p>
     </div>
     <div class="mt-4">

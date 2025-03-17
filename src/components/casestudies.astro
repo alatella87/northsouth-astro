@@ -1,6 +1,7 @@
 ---
 // @ts-ignore
 import Link from "./ui/link.astro";
+import { Picture } from "astro:assets";
 import software from "../assets/thumbsHome/softwaregestionale.webp";
 import gmpro from "../assets/thumbsHome/gmpro.webp";
 import badilatti from "../assets/thumbsHome/badilatti.webp";
@@ -10,84 +11,113 @@ import naranja from "../assets/thumbsHome/naranja.webp";
 import sepoy from "../assets/thumbsHome/sepoy.webp";
 import whirlpool from "../assets/thumbsHome/whirlpool.webp";
 
-const caseStudies = [
-  {
-    company: "Caffé Badilatti",
-    services: ["UX/UI design", "E-Commmerce"],
-    description:
-      "Eseguito un rinnovamento UX/UI della piattaforma e-commerce per un marchio di caffè svizzero premium. Allineato il design con l'identità del marchio e affrontato le esigenze specifiche degli utenti.",
-    picture: badilatti,
-  },
-  {
-    company: "DPStudio",
-    services: ["UX/UI design", "Visual identity"],
-    description:
-      "Sviluppato un nuovo funnel e una landing page SaaS per softwaregestionale.ch, una piattaforma di gestione software che serve piccole e medie imprese nella Svizzera italiana.",
-    picture: software,
-  },
-  {
-    company: "Farmatouch",
-    services: ["soluzioni", "conoscenza"],
-    description:
-      "Progettata la piattaforma di acquisto di farmaci per un'app farmaceutica, semplificando l'interfaccia, aggiornando la tecnologia e migliorando l'esperienza utente.",
-    picture: farmatouch,
-  },
-  {
-    company: "Naranja",
-    services: ["soluzioni", "conoscenza"],
-    description:
-      "Progettato un sito e-commerce per una banca innovativa, migliorando la navigazione, stabilendo una nuova identità visiva, migliorando l'esperienza utente e semplificando il checkout con migliori opzioni di spedizione e pagamento.",
-    picture: naranja,
-  },
-  {
-    company: "Sepoy",
-    services: ["soluzioni", "conoscenza"],
-    description:
-      "Rinnovato il sito web per un'azienda specializzata in interfacce Magento scalabili ottimizzate per la conversione. Migliorata l'esperienza utente e mostrati i servizi del cliente con un design moderno.",
-    picture: sepoy,
-  },
-  {
-    company: "Whirlpool",
-    services: ["soluzioni", "conoscenza"],
-    description:
-      "Ridisegnato il sito e-commerce per un leader globale negli elettrodomestici. Migliorata la navigazione utente, semplificati i flussi di lavoro e ottimizzati i processi di checkout.",
-    picture: whirlpool,
-  },
-  {
-    company: "GMPro Gmbh",
-    services: ["soluzioni", "strategia"],
-    description:
-      "Fornita una soluzione e-commerce completa con ERP integrato, identità del marchio completa e design del prodotto (AutoCAD) per un rivenditore di attrezzature per pizza di alta qualità entro 50 giorni.",
-    picture: gmpro,
-  },
-  {
-    company: "Scuola Guida Lugano",
-    services: ["soluzioni", "strategia"],
-    description:
-      "Ridisegnato il sito web, il logo e il funnel dei social media per una scuola guida in Svizzera. Integrata una nuova piattaforma di prenotazione per semplificare le interazioni degli utenti.",
-    picture: scuolaguida,
-  },
-];
+// Import translations
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+import { caseStudies as caseStudiesData } from "../i18n/ui";
 
-// Go to /utils/translations for existing stubs
+// Get current language and translation function
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+// Get case studies for the current language
+const caseStudies = caseStudiesData[lang] || caseStudiesData["it"];
 
 ---
 <div class="mt-24">
   <div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
     <h2
       class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">
-      Lasciati ispirare
+      {lang === 'it' ? 'Lasciati ispirare' :
+       lang === 'en' ? 'Get inspired' :
+       lang === 'fr' ? 'Laissez-vous inspirer' :
+       lang === 'de' ? 'Lassen Sie sich inspirieren' : 'Lasciati ispirare'}
     </h2>
     <p
       class="font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">
-      I nostri case studies rappresentano il lavoro svolto dalla nostra consulenza digitale, mostrando come abbiamo aiutato diverse aziende a migliorare l'esperienza utente, ottimizzare i processi di checkout e sviluppato soluzioni digitali complete. Siamo orgogliosi di condividere i nostri successi e di dimostrare il nostro impegno nel fornire servizi di alta qualità ai nostri clienti.
+      {lang === 'it' ? 'I nostri case studies rappresentano il lavoro svolto dalla nostra consulenza digitale, mostrando come abbiamo aiutato diverse aziende a migliorare l\'esperienza utente, ottimizzare i processi di checkout e sviluppato soluzioni digitali complete. Siamo orgogliosi di condividere i nostri successi e di dimostrare il nostro impegno nel fornire servizi di alta qualità ai nostri clienti.' :
+       lang === 'en' ? 'Our case studies represent the work done by our digital consultancy, showing how we have helped various companies improve user experience, optimize checkout processes, and develop comprehensive digital solutions. We are proud to share our successes and demonstrate our commitment to providing high-quality services to our clients.' :
+       lang === 'fr' ? 'Nos études de cas représentent le travail réalisé par notre cabinet de conseil numérique, montrant comment nous avons aidé diverses entreprises à améliorer l\'expérience utilisateur, à optimiser les processus de paiement et à développer des solutions numériques complètes. Nous sommes fiers de partager nos succès et de démontrer notre engagement à fournir des services de haute qualité à nos clients.' :
+       lang === 'de' ? 'Unsere Fallstudien repräsentieren die Arbeit unserer digitalen Beratung und zeigen, wie wir verschiedenen Unternehmen dabei geholfen haben, die Benutzererfahrung zu verbessern, Checkout-Prozesse zu optimieren und umfassende digitale Lösungen zu entwickeln. Wir sind stolz darauf, unsere Erfolge zu teilen und unser Engagement für die Bereitstellung hochwertiger Dienstleistungen für unsere Kunden zu demonstrieren.' : 'I nostri case studies rappresentano il lavoro svolto dalla nostra consulenza digitale, mostrando come abbiamo aiutato diverse aziende a migliorare l\'esperienza utente, ottimizzare i processi di checkout e sviluppato soluzioni digitali complete. Siamo orgogliosi di condividere i nostri successi e di dimostrare il nostro impegno nel fornire servizi di alta qualità ai nostri clienti.'}
     </p>
+    
   </div>
 <div class="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-16">
   {
     caseStudies.map((study, index) => (
       <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 place-self-center">
-          <img class="rounded-t-lg" src={study.picture.src} alt="" />
+          {/* Render the image based on the picture key */}
+          {study.company === "Caffé Badilatti" && (
+            <Picture 
+              src={badilatti} 
+              alt={`${study.company} project image`}
+              width={400}
+              height={300}
+              class="rounded-t-lg w-full object-cover"
+            />
+          )}
+          {study.company === "DPStudio" && (
+            <Picture 
+              src={software} 
+              alt={`${study.company} project image`}
+              width={400}
+              height={300}
+              class="rounded-t-lg w-full object-cover"
+            />
+          )}
+          {study.company === "Farmatouch" && (
+            <Picture 
+              src={farmatouch} 
+              alt={`${study.company} project image`}
+              width={400}
+              height={300}
+              class="rounded-t-lg w-full object-cover"
+            />
+          )}
+          {study.company === "Naranja" && (
+            <Picture 
+              src={naranja} 
+              alt={`${study.company} project image`}
+              width={400}
+              height={300}
+              class="rounded-t-lg w-full object-cover"
+            />
+          )}
+          {study.company === "Sepoy" && (
+            <Picture 
+              src={sepoy} 
+              alt={`${study.company} project image`}
+              width={400}
+              height={300}
+              class="rounded-t-lg w-full object-cover"
+            />
+          )}
+          {study.company === "Whirlpool" && (
+            <Picture 
+              src={whirlpool} 
+              alt={`${study.company} project image`}
+              width={400}
+              height={300}
+              class="rounded-t-lg w-full object-cover"
+            />
+          )}
+          {study.company === "GMPro Gmbh" && (
+            <Picture 
+              src={gmpro} 
+              alt={`${study.company} project image`}
+              width={400}
+              height={300}
+              class="rounded-t-lg w-full object-cover"
+            />
+          )}
+          {study.company === "Scuola Guida Lugano" && (
+            <Picture 
+              src={scuolaguida} 
+              alt={`${study.company} project image`}
+              width={400}
+              height={300}
+              class="rounded-t-lg w-full object-cover"
+            />
+          )}
         <div class="p-5">
             <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
               {study.company}
@@ -101,6 +131,18 @@ const caseStudies = [
               {service}
             </a>
           ))}
+          <div class="mt-4">
+            <a href={`/casestudies/${study.company.toLowerCase().replace(/\s+/g, '-').replace(/é/g, 'e')}`} 
+               class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
+                {lang === 'it' ? 'Leggi di più' :
+                 lang === 'en' ? 'Read more' :
+                 lang === 'fr' ? 'Lire plus' :
+                 lang === 'de' ? 'Mehr lesen' : 'Leggi di più'}
+                <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                </svg>
+            </a>
+          </div>
         </div>
       </div>
     ))

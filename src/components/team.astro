@@ -2,6 +2,10 @@
 import { getCollection } from "astro:content";
 import { Picture } from "astro:assets";
 import Container from "@components/container.astro";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 
 // Filter team entries with 'draft: false' & date before current date
 const publishedTeamMembers = await getCollection("team", ({ data }) => {
@@ -13,13 +17,11 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
     <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-24">
       <h2
         class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">
-        Il nostro team
+        {t("team.title")}
       </h2>
       <p
         class="font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">
-        Siamo un team multiculturale. Veniamo da
-        diverse esperienze, portando personalità e competenze diverse nei nostri progetti.
-        Questo è ciò che rende il nostro team così speciale.
+        {t("team.description")}
       </p>
     </div>
   </Container>

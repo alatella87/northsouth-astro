@@ -2,7 +2,11 @@
 import lyke from "@assets/lyke.png";
 import max from "@assets/max.png";
 import luigi from "@assets/luigi.png";
-import dpstudio from "@assets/dpstudio.webp"
+import dpstudio from "@assets/dpstudio.webp";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 
 const items = [
   {
@@ -38,7 +42,7 @@ const items = [
   <div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
     <h2
       class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">
-      Referenze
+      {t("references.title")}
     </h2>
   </div>
 </div>
@@ -94,7 +98,7 @@ const items = [
                 <div class="text-black">{item.name}</div>
                 <div class="text-black/75">
                   {" "}
-                  {item.title} |<span class="font-bold"> {item.company}</span>
+                  {item.title} |<span class="font-bold"> {t("references.company")} {item.company}</span>
                 </div>
               </div>
             </div>

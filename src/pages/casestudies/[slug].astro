@@ -1,0 +1,100 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+
+// Import translations
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
+import { defaultLang } from "../../i18n/ui";
+
+// Generate paths with language preference
+export async function getStaticPaths() {
+  const allCaseStudies = await getCollection("casestudies");
+  
+  // Create a map to group entries by their base slug (without language prefix)
+  const entriesBySlug = {};
+  
+  allCaseStudies.forEach(entry => {
+    // Extract language and slug from the full slug path (e.g., "en/dpstudio" -> lang="en", baseSlug="dpstudio")
+    const [lang, baseSlug] = entry.slug.split('/');
+    
+    // Skip if the slug doesn't match our expected format
+    if (!baseSlug) return;
+    
+    // Initialize the slug group if it doesn't exist
+    if (!entriesBySlug[baseSlug]) {
+      entriesBySlug[baseSlug] = {};
+    }
+    
+    // Add this entry to the appropriate language group
+    entriesBySlug[baseSlug][lang] = entry;
+  });
+  
+  // Generate a path for each unique base slug
+  return Object.entries(entriesBySlug).map(([slug, entries]) => ({
+    params: { slug },
+    props: { entries, slug },
+  }));
+}
+
+// Get the entries and slug from props
+const { entries, slug } = Astro.props;
+
+// Get current language from URL
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+// Select the appropriate language version or fall back to default
+const entry = entries[lang] || entries[defaultLang] || Object.values(entries)[0];
+const { Content } = await entry.render();
+---
+
+<Layout title={entry.data.title}>
+  <Container>
+    <div class="mx-auto max-w-3xl mt-14">
+      <span class="text-blue-400 uppercase tracking-wider text-sm font-medium">
+        {entry.data.company}
+      </span>
+      <div class="flex gap-2 mt-3 items-center flex-wrap md:flex-nowrap">
+        <time
+          class="text-gray-400"
+          datetime={entry.data.publishDate.toISOString()}>
+          {entry.data.publishDate.toDateString()}
+        </time>
+        <div class="w-full md:w-auto flex flex-wrap gap-3 mt-3">
+          {
+            entry.data.services.map((service) => (
+              <span class="inline-flex mr-2 items-center px-3 py-1 text-[14px] bg-black text-center text-white solutions rounded-sm focus:ring-4">
+                {service}
+              </span>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+
+    <div class="mx-auto prose prose-lg mt-10 max-w-3xl">
+      <Content />
+    </div>
+    
+    <div class="text-center mt-8">
+      <a
+        href="/casestudies"
+        class="bg-gray-100 px-5 py-3 rounded-md hover:bg-gray-200 transition"
+        >← Back to Case Studies</a
+      >
+    </div>
+  </Container>
+</Layout>
+
+<style>
+  .solutions {
+    background-color: black;
+  }
+  .strategy {
+    background-color: #4f46e5;
+  }
+  .knowledge {
+    background-color: #0900a6;
+  }
+</style>
