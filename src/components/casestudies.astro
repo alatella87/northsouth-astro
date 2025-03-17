@@ -100,7 +100,7 @@ const caseStudies = caseStudiesData[lang] || caseStudiesData["it"];
               class="rounded-t-lg w-full object-cover"
             />
           )}
-          {study.company === "GMPro Gmbh" && (
+          {study.company === "GMPro" && (
             <Picture 
               src={gmpro} 
               alt={`${study.company} project image`}
@@ -132,7 +132,7 @@ const caseStudies = caseStudiesData[lang] || caseStudiesData["it"];
             </a>
           ))}
           <div class="mt-4">
-            <a href={`/casestudies/${study.company.toLowerCase().replace(/\s+/g, '-').replace(/é/g, 'e')}`} 
+            <a href={`${lang}/casestudies/${study.company.toLowerCase().replace(/\s+/g, '-').replace(/é/g, 'e')}`} 
                class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
                 {lang === 'it' ? 'Leggi di più' :
                  lang === 'en' ? 'Read more' :
