@@ -8,123 +8,34 @@ import { getLangFromUrl, useTranslations } from "../i18n/utils";
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
-const testimonials = {
-  it: [
-    {
-      name: "Luca M.",
-      title: "Marketing Manager",
-      company: "dpstudio.ch",
-      services: "Solutions",
-      strategy: "Strategy",
-      image: lyke,
-      body: "Un servizio impeccabile: dall'idea al design, realizzazione rapida e su misura, con supporto continuo e senza intoppi.",
-    },
-    {
-      name: "Massimiliano G.",
-      title: "Proprietario",
-      company: "gm-pro.ch",
-      services: "Solutions",
-      strategy: "Strategy",
-      image: max,
-      body: "Concezione e lancio e-commerce in 40gg. After sales 24h 7/7 sull'ERP prescelto. Un supporto continuo in tutte le situazioni.",
-    },
-    {
-      name: "Luigi F.",
-      title: "Proprietario",
-      company: "lusha-gmbh.ch",
-      services: "Solutions",
-      image: luigi,
-      body: "Grazie a Northsouth la mia presenza digitale è ora assicurata e seguita in modo professionale. Personal branding e content management incluso.",
-    },
-  ],
-  en: [
-    {
-      name: "Luca M.",
-      title: "Marketing Manager",
-      company: "dpstudio.ch",
-      services: "Solutions",
-      strategy: "Strategy",
-      image: lyke,
-      body: "Impeccable service: from concept to design, fast and tailored implementation, with continuous support and no hiccups.",
-    },
-    {
-      name: "Massimiliano G.",
-      title: "Owner",
-      company: "gm-pro.ch",
-      services: "Solutions",
-      strategy: "Strategy",
-      image: max,
-      body: "E-commerce conceptualization and launch in 40 days. 24/7 after-sales support on the chosen ERP. Continuous support in all situations.",
-    },
-    {
-      name: "Luigi F.",
-      title: "Owner",
-      company: "lusha-gmbh.ch",
-      services: "Solutions",
-      image: luigi,
-      body: "Thanks to Northsouth my digital presence is now secured and professionally managed. Personal branding and content management included.",
-    },
-  ],
-  fr: [
-    {
-      name: "Luca M.",
-      title: "Responsable Marketing",
-      company: "dpstudio.ch",
-      services: "Solutions",
-      strategy: "Strategy",
-      image: lyke,
-      body: "Un service impeccable : de l'idée au design, réalisation rapide et sur mesure, avec un support continu et sans accrocs.",
-    },
-    {
-      name: "Massimiliano G.",
-      title: "Propriétaire",
-      company: "gm-pro.ch",
-      services: "Solutions",
-      strategy: "Strategy",
-      image: max,
-      body: "Conception et lancement e-commerce en 40 jours. SAV 24h/24 7j/7 sur l'ERP choisi. Un soutien continu dans toutes les situations.",
-    },
-    {
-      name: "Luigi F.",
-      title: "Propriétaire",
-      company: "lusha-gmbh.ch",
-      services: "Solutions",
-      image: luigi,
-      body: "Grâce à Northsouth, ma présence numérique est désormais assurée et suivie de manière professionnelle. Personal branding et gestion de contenu inclus.",
-    },
-  ],
-  de: [
-    {
-      name: "Luca M.",
-      title: "Marketing Manager",
-      company: "dpstudio.ch",
-      services: "Solutions",
-      strategy: "Strategy",
-      image: lyke,
-      body: "Ein makelloser Service: von der Idee zum Design, schnelle und maßgeschneiderte Umsetzung, mit kontinuierlicher Unterstützung und ohne Probleme.",
-    },
-    {
-      name: "Massimiliano G.",
-      title: "Inhaber",
-      company: "gm-pro.ch",
-      services: "Solutions",
-      strategy: "Strategy",
-      image: max,
-      body: "E-Commerce-Konzeption und -Launch in 40 Tagen. 24/7 After-Sales-Support für das ausgewählte ERP. Kontinuierliche Unterstützung in allen Situationen.",
-    },
-    {
-      name: "Luigi F.",
-      title: "Inhaber",
-      company: "lusha-gmbh.ch",
-      services: "Solutions",
-      image: luigi,
-      body: "Dank Northsouth ist meine digitale Präsenz jetzt gesichert und wird professionell betreut. Personal Branding und Content-Management inklusive.",
-    },
-  ],
-};
-
-// Get testimonials based on current language, fallback to Italian if language not available
-const items = testimonials[lang] || testimonials.it;
+const items = [
+  {
+    name: "Luca M.",
+    title: "Marketing Manager",
+    company: "dpstudio.ch",
+    services: "Solutions",
+    strategy: "Strategy",
+    image: lyke,
+    body: "Un servizio impeccabile: dall'idea al design, realizzazione rapida e su misura, con supporto continuo e senza intoppi.",
+  },
+  {
+    name: "Massimiliano G.",
+    title: "Owner ",
+    company: "gm-pro.ch",
+    services: "Solutions",
+    strategy: "Strategy",
+    image: max,
+    body: "Concezione e lancio e-commerce in 40gg. After sales 24h 7/7 sull'ERP prescelto. Un supporto continuo in tutte le situazioni.",
+  },
+  {
+    name: "Luigi F.",
+    title: "Owner",
+    company: "lusha-gmbh.ch",
+    services: "Solutions",
+    image: luigi,
+    body: "Grazie a Northsouth la mia presenza digitale è ora assicurata e seguita in modo professionale. Personal branding e content management incluso.",
+  },
+];
 ---
 
 <div class="mt-24">
@@ -141,7 +52,7 @@ const items = testimonials[lang] || testimonials.it;
   <div class="mx-auto max-w-2xl lg:max-w-4xl">
     <img class="mx-auto h-12 opacity-30" alt="" src={dpstudio.src}>
     <figure class="mt-10">
-        <p class="text-center text-gray-400 font-thin leading-tight sm:text-2xl">{items[0].body}</p>
+        <p class="text-center text-gray-400 font-thin leading-tight sm:text-2xl">Un servizio impeccabile: dall'idea al design<br/> realizzazione rapida e su misura, con supporto continuo e senza intoppi.</p>
       <figcaption class="mt-10">
         <img class="mx-auto h-[60px] w-[60px] rounded-full" src={lyke.src}>
         <div class="mt-4 flex items-center justify-center space-x-3 text-base">
@@ -149,7 +60,7 @@ const items = testimonials[lang] || testimonials.it;
           <svg viewBox="0 0 2 2" width="3" height="3" aria-hidden="true" class="fill-gray-900">
             <circle cx="1" cy="1" r="1" />
           </svg>
-          <div class="text-gray-600">{items[0].title} {t("references.company")} dpstudio</div>
+          <div class="text-gray-600">Marketing Manager in dpstudio</div>
         </div>
       </figcaption>
     </figure>
@@ -169,7 +80,7 @@ const items = testimonials[lang] || testimonials.it;
                   <span class="font-bold tracking-tight text-white dark:text-white">
                     Northsouth
                   </span>
-                  <span class="ml-1">{" " + t("services.title")}</span>
+                  <span class="ml-1">{" " + item.services}</span>
                 </span>
               )}
               {item.strategy === "Strategy" && (
@@ -177,7 +88,7 @@ const items = testimonials[lang] || testimonials.it;
                   <span class="font-bold tracking-tight text-white dark:text-white">
                     Northsouth
                   </span>
-                  <span class="ml-1">{" " + t("services.strategy.strategy")}</span>
+                  <span class="ml-1">{" " + item.strategy}</span>
                 </span>
               )}
             </div>

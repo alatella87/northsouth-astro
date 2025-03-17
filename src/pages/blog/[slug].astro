@@ -46,16 +46,6 @@ const { Content } = await entry.render();
           }
         </div>
       </div>
-      
-      {entry.data.image && (
-        <div class="mt-6">
-          <img
-            src={entry.data.image.src}
-            alt={entry.data.image.alt}
-            class="rounded-md w-full aspect-video object-cover"
-          />
-        </div>
-      )}
     </div>
 
     <div class="mx-auto prose prose-lg mt-6 max-w-3xl">

@@ -639,7 +639,7 @@ export const caseStudies = {
       picture: "whirlpool",
     },
     {
-      company: "GMPro",
+      company: "GMPro Gmbh",
       services: ["soluzioni", "strategia"],
       description:
         "Fornita una soluzione e-commerce completa con ERP integrato, identità del marchio completa e design del prodotto (AutoCAD) per un rivenditore di attrezzature per pizza di alta qualità entro 50 giorni.",
@@ -697,7 +697,7 @@ export const caseStudies = {
       picture: "whirlpool",
     },
     {
-      company: "GMPro",
+      company: "GMPro Gmbh",
       services: ["solutions", "strategy"],
       description:
         "Delivered a comprehensive e-commerce solution with integrated ERP, complete brand identity, and product design (AutoCAD) for a high-quality pizza equipment retailer within 50 days.",
@@ -755,7 +755,7 @@ export const caseStudies = {
       picture: "whirlpool",
     },
     {
-      company: "GMPro",
+      company: "GMPro Gmbh",
       services: ["solutions", "stratégie"],
       description:
         "Fourniture d'une solution e-commerce complète avec ERP intégré, identité de marque complète et conception de produits (AutoCAD) pour un détaillant d'équipements de pizza de haute qualité en 50 jours.",
@@ -813,7 +813,7 @@ export const caseStudies = {
       picture: "whirlpool",
     },
     {
-      company: "GMPro",
+      company: "GMPro Gmbh",
       services: ["Lösungen", "Strategie"],
       description:
         "Bereitstellung einer umfassenden E-Commerce-Lösung mit integriertem ERP, vollständiger Markenidentität und Produktdesign (AutoCAD) für einen Händler von hochwertigen Pizzageräten innerhalb von 50 Tagen.",
