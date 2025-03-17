@@ -1,15 +1,12 @@
 ---
 draft: false
-company: DPStudio
-snippet: Soluzioni software personalizzate per l'automazione aziendale
+company: "scuolaguida"
+snippet: "Admin Per Scuole Guide, create con React+PostgreSQL"
 image:
-  src: /src/assets/thumbsHome/softwaregestionale.webp
-  alt: DPStudio project image
+  src: "/src/assets/thumbsHome/softwaregestionale.webp"
+  alt: "DPStudio project image"
 publishDate: "2023-05-10"
-services:
-  - Sviluppo Software
-  - UI/UX Design
-fmContentType: casestudy
+services: ["Sviluppo Software"]
 ---
 
 # Progetto Software DPStudio

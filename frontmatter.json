@@ -1,0 +1,269 @@
+{
+  "$schema": "https://frontmatter.codes/frontmatter.schema.json",
+  "frontMatter.framework.id": "astro",
+  "frontMatter.preview.host": "http://localhost:4321",
+  "frontMatter.content.publicFolder": {
+    "path": "src/assets",
+    "relative": true
+  },
+  "frontMatter.content.pageFolders": [
+    {
+      "title": "Blog",
+      "path": "[[workspace]]/src/content/blog"
+    },
+    {
+      "title": "Case Studies (IT)",
+      "path": "[[workspace]]/src/content/casestudies/it"
+    },
+    {
+      "title": "Case Studies (EN)",
+      "path": "[[workspace]]/src/content/casestudies/en"
+    },
+    {
+      "title": "Case Studies (FR)",
+      "path": "[[workspace]]/src/content/casestudies/fr"
+    },
+    {
+      "title": "Case Studies (DE)",
+      "path": "[[workspace]]/src/content/casestudies/de"
+    },
+    {
+      "title": "Team",
+      "path": "[[workspace]]/src/content/team"
+    }
+  ],
+  "frontMatter.taxonomy.contentTypes": [
+    {
+      "name": "blog",
+      "pageBundle": false,
+      "previewPath": "'blog'",
+      "filePrefix": null,
+      "clearEmpty": true,
+      "fields": [
+        {
+          "title": "Draft",
+          "name": "draft",
+          "type": "boolean",
+          "default": false
+        },
+        {
+          "title": "Title",
+          "name": "title",
+          "type": "string",
+          "single": true
+        },
+        {
+          "title": "Snippet",
+          "name": "snippet",
+          "type": "string"
+        },
+        {
+          "title": "Image",
+          "name": "image",
+          "type": "object",
+          "fields": [
+            {
+              "title": "Source",
+              "name": "src",
+              "type": "string"
+            },
+            {
+              "title": "Alt Text",
+              "name": "alt",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "title": "Publish Date",
+          "name": "publishDate",
+          "type": "datetime",
+          "default": "{{now}}",
+          "isPublishDate": true
+        },
+        {
+          "title": "Author",
+          "name": "author",
+          "type": "string",
+          "default": "Astroship"
+        },
+        {
+          "title": "Category",
+          "name": "category",
+          "type": "string"
+        },
+        {
+          "title": "Tags",
+          "name": "tags",
+          "type": "tags"
+        }
+      ]
+    },
+    {
+      "name": "casestudy",
+      "pageBundle": false,
+      "previewPath": "'/casestudies'",
+      "filePrefix": null,
+      "clearEmpty": true,
+      "fields": [
+        {
+          "title": "Draft",
+          "name": "draft",
+          "type": "boolean",
+          "default": false
+        },
+        {
+          "title": "Company",
+          "name": "company",
+          "type": "string",
+          "single": true
+        },
+        {
+          "title": "Snippet",
+          "name": "snippet",
+          "type": "string",
+          "description": "Brief description of the case study"
+        },
+        {
+          "title": "Image",
+          "name": "image",
+          "type": "object",
+          "fields": [
+            {
+              "title": "Source",
+              "name": "src",
+              "type": "string"
+            },
+            {
+              "title": "Alt Text",
+              "name": "alt",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "title": "Publish Date",
+          "name": "publishDate",
+          "type": "datetime",
+          "default": "{{now}}",
+          "isPublishDate": true
+        },
+        {
+          "title": "Services",
+          "name": "services",
+          "type": "choice",
+          "multiple": true,
+          "choices": [
+            "Sviluppo Software",
+            "UI/UX Design",
+            "E-Commerce",
+            "Marketing Digitale",
+            "Branding",
+            "Strategie Digitali",
+            "Knowledge Management",
+            "Workshops",
+            "Software Development",
+            "Digital Strategy",
+            "Web Development",
+            "Développement Web",
+            "Webentwicklung",
+            "Design UX/UI"
+          ]
+        },
+        {
+          "title": "Content",
+          "name": "content",
+          "type": "string",
+          "description": "Optional additional content",
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "team",
+      "pageBundle": false,
+      "previewPath": "'/team'",
+      "filePrefix": null,
+      "clearEmpty": true,
+      "fields": [
+        {
+          "title": "Draft",
+          "name": "draft",
+          "type": "boolean",
+          "default": false
+        },
+        {
+          "title": "Name",
+          "name": "name",
+          "type": "string",
+          "single": true
+        },
+        {
+          "title": "Title",
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "title": "Avatar",
+          "name": "avatar",
+          "type": "object",
+          "fields": [
+            {
+              "title": "Source",
+              "name": "src",
+              "type": "string"
+            },
+            {
+              "title": "Alt Text",
+              "name": "alt",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "title": "Publish Date",
+          "name": "publishDate",
+          "type": "datetime",
+          "default": "{{now}}",
+          "isPublishDate": true
+        }
+      ]
+    }
+  ],
+  "frontMatter.taxonomy.customTaxonomy": [
+    {
+      "id": "languages",
+      "options": [
+        "it",
+        "en",
+        "fr",
+        "de"
+      ]
+    }
+  ],
+  "frontMatter.i18n": {
+    "defaultLocale": "it",
+    "locales": [
+      {
+        "id": "it",
+        "name": "Italian",
+        "contentPath": "it"
+      },
+      {
+        "id": "en",
+        "name": "English",
+        "contentPath": "en"
+      },
+      {
+        "id": "fr",
+        "name": "French",
+        "contentPath": "fr"
+      },
+      {
+        "id": "de",
+        "name": "German",
+        "contentPath": "de"
+      }
+    ]
+  }
+}

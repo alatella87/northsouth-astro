@@ -73,6 +73,16 @@ const { Content } = await entry.render();
       </div>
     </div>
 
+    {entry.data.image && (
+      <div class="mx-auto max-w-4xl mt-10">
+        <img 
+          src={entry.data.image.src} 
+          alt={entry.data.image.alt || entry.data.company} 
+          class="w-full h-auto rounded-lg shadow-lg"
+        />
+      </div>
+    )}
+
     <div class="mx-auto prose prose-lg mt-10 max-w-3xl">
       <Content />
     </div>

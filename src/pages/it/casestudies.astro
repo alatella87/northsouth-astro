@@ -1,0 +1,60 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
+
+// Filter case studies by language
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const publishedCaseStudies = await getCollection("casestudies", ({ data, slug }) => {
+  const [postLang] = slug.split('/');
+  return postLang === 'it' && !data.draft;
+});
+---
+
+<Layout title="Casi di Studio">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">Casi di Studio</Fragment>
+      <Fragment slot="desc">
+        Scopri come abbiamo aiutato le aziende a raggiungere i loro obiettivi digitali.
+      </Fragment>
+    </Sectionhead>
+
+    <main class="mt-16">
+      <ul class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        {publishedCaseStudies.map((caseStudy) => (
+          <li class="bg-white rounded-lg shadow-md overflow-hidden">
+            <a href={`/it/casestudies/${caseStudy.slug.split('/')[1]}`}>
+              {caseStudy.data.image && (
+                <img 
+                  src={caseStudy.data.image.src} 
+                  alt={caseStudy.data.image.alt || caseStudy.data.company}
+                  class="w-full h-48 object-cover"
+                />
+              )}
+              <div class="p-6">
+                <h2 class="text-xl font-semibold text-gray-800 mb-2">
+                  {caseStudy.data.company}
+                </h2>
+                <p class="text-gray-600 line-clamp-3">
+                  {caseStudy.data.snippet}
+                </p>
+                <div class="mt-4 flex flex-wrap gap-2">
+                  {caseStudy.data.services.map((service) => (
+                    <span class="inline-block px-3 py-1 text-xs bg-black text-white rounded-sm">
+                      {service}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </main>
+  </Container>
+</Layout>
