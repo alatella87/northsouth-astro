@@ -58,7 +58,7 @@ const caseStudies = Object.entries(caseStudiesBySlug).map(([slug, entries]) => {
       {
         caseStudies.map((study) => (
           <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 place-self-center">
-            <a href={`/casestudies/${study.slug.split('/')[1]}`}>
+            <a href={`${lang}/casestudies/${study.slug.split('/')[1]}`}>
               <Picture 
                 src={study.data.image.src} 
                 alt={study.data.image.alt}
