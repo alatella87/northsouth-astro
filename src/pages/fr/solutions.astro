@@ -87,7 +87,7 @@ const features = [
       t("solutions.features.1.services.4"),
     ],
     link: "/solutions",
-    color: "#0900a6",
+    color: "#000",
     description: t("solutions.features.1.description"),
     icon: "bx:bxs-briefcase",
   },
@@ -101,7 +101,7 @@ const features = [
       t("solutions.features.2.services.4"),
     ],
     link: "/strategy",
-    color: "#0900a6",
+    color: "#000",
     description: t("solutions.features.2.description"),
     icon: "bx:bxs-window-alt",
   },
@@ -114,7 +114,7 @@ const features = [
       t("solutions.features.3.services.3"),
     ],
     link: "/knowledge",
-    color: "#0900a6",
+    color: "#000",
     description: t("solutions.features.3.description"),
     icon: "bx:bxs-window-alt",
   },
@@ -139,7 +139,7 @@ const features = [
       <div>
         <div class="text-left mt-6 mb-24">
           <!-- Using translation keys for header text -->
-          <h2 class="text-base font-semibold leading-7 text-indigo-600">
+          <h2 class="text-base font-semibold leading-7 text-black">
             {t("solutions.nav.services")}
           </h2>
           <h4
@@ -151,7 +151,7 @@ const features = [
             <h1
               class="mb-4 text-2xl font-extrabold text-gray-900 dark:text-white md:text-3xl lg:text-4xl my-12">
               <span
-                class="text-transparent bg-clip-text bg-gradient-to-r to-blue-600 from-indigo-400">
+                class="text-transparent bg-clip-text bg-gradient-to-r to-black from-gray-400">
                 {t("solutions.mainTitle")}
               </span>
             </h1>
@@ -164,14 +164,14 @@ const features = [
           <h3
             class="mb-2 text-1xl font-extrabold text-gray-900 dark:text-white md:text-2xl lg:text-3xl my-6">
             <span
-              class="text-transparent bg-clip-text bg-gradient-to-r to-blue-600 from-indigo-400">
+              class="text-transparent bg-clip-text bg-gradient-to-r to-black from-gray-400">
               {t("solutions.approachTitle")}
             </span>
           </h3>
           <div class="flex flex-row mt-4">
             <div>
               <blockquote
-              class="w-1/2 p-8 my-2 border-s-4 border-gray-300 bg-gradient-to-r to-[#0900a6] from-blue-950">
+              class="w-1/2 p-8 my-2 border-s-4 border-gray-300 bg-gradient-to-r to-black from-gray-400">
                 <p class="text-white">{t("solutions.approachQuote")}</p>
                 <div class="flex justify-start items-center mr-8 mt-8">
                   <img
@@ -193,8 +193,8 @@ const features = [
                 <li class="flex-1 list-step-solutions min-h-[300px]">
                   <a
                     href="https://pagedone.io/"
-                    class="border-l-2 flex flex-col border-t-0 pl-4 pt-0 border-solid border-indigo-600 font-medium lg:pt-4 lg:border-t-2 lg:border-l-0 lg:pl-0">
-                    <span class="text-sm lg:text-base text-indigo-600">
+                    class="border-l-2 flex flex-col border-t-0 pl-4 pt-0 border-solid border-black font-medium lg:pt-4 lg:border-t-2 lg:border-l-0 lg:pl-0">
+                    <span class="text-sm lg:text-base text-transparent bg-clip-text bg-gradient-to-r to-black from-gray-400">
                       Step {step.id}
                     </span>
                     <h4 class="text-base text-md text-gray-900">{step.type}</h4>
@@ -202,9 +202,9 @@ const features = [
                       {step.definition}
                     </div>
                   </a>
-                  <div class="mt-4">
+                  <div class="mt-4f flex flex-wrap">
                     {step.internalTools.map((tool) => (
-                      <span class="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm dark:bg-blue-900 dark:text-blue-300">
+                      <span class="bg-black text-white mt-1 text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm dark:bg-blue-900 dark:text-blue-300">
                         {tool}
                       </span>
                     ))}
@@ -218,7 +218,7 @@ const features = [
           <h3
             class="mb-4 text-1xl font-extrabold text-gray-900 dark:text-white md:text-2xl lg:text-3xl my-2">
             <span
-              class="text-transparent bg-clip-text bg-gradient-to-r to-blue-600 from-indigo-400">
+              class="text-transparent bg-clip-text bg-gradient-to-r to-black from-gray-400">
               {t("solutions.features.title")}
             </span>
           </h3>
@@ -226,7 +226,7 @@ const features = [
             class="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 mt-8 gap-16">
             {
               features.map((feature) => (
-                <a
+              <a
                   style={{ backgroundColor: feature.color }}
                   class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-500 place-self-center min-h-[400px] relative">
                   <div class="stripes">
@@ -239,12 +239,12 @@ const features = [
                   </h5>
                   <h6 class="mb-2 text-1xl font-bold tracking-tight text-white dark:text-white">
                     <span class="text-2xl font-bold">
-                      {t("level")} {feature.type}
+                      {feature.type}
                     </span>
                   </h6>
                   <div class="my-4 mb-auto">
                     {feature.services.map((service) => (
-                      <span class="inline-flex items-center rounded-md bg-blue-50 px-4 py-1 mb-2 mr-2 text-xxs font-xs text-blue-700 ring-1 ring-inset ring-blue-700/10">
+                      <span class="inline-flex items-center rounded-md bg-blue-50 px-4 py-1 mb-2 mr-2 text-xxs font-xs text-black ring-1 ring-inset ring-blue-700/10">
                         {service}
                       </span>
                     ))}
@@ -282,7 +282,7 @@ const features = [
 
           <!-- Tools -->
           <div class="mt-24 text-center">
-            <h2 class="text-base font-semibold leading-7 text-indigo-600">
+            <h2 class="text-base font-semibold leading-7 text-black">
               {t("solutions.tools.title")}
             </h2>
             <div

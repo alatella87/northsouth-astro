@@ -175,11 +175,11 @@ export const ui = {
     "solutions.features.title": "Livelli di impatto tecnologico",
     "solutions.features.1.type": "Frontend-First Prototyping",
     "solutions.features.1.description": "Utilizziamo un approccio di prototipazione rapida con tecnologie frontend per validare concetti e ridurre i tempi di sviluppo.",
-    "solutions.features.1.services.0": "Prototipazione AI-Assisted",
+    "solutions.features.1.services.0": "Prototipazione AI",
     "solutions.features.1.services.1": "Validazione utente",
     "solutions.features.1.services.2": "Test A/B",
     "solutions.features.1.services.3": "Design System",
-    "solutions.features.1.services.4": "UI Components",
+    "solutions.features.1.services.4": "Componenti UI",
     
     "solutions.features.2.type": "Sviluppo Full-Stack",
     "solutions.features.2.description": "Sviluppiamo soluzioni complete integrando frontend moderno con backend robusti e scalabili.",

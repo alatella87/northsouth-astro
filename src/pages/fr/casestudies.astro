@@ -14,19 +14,22 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
 // Get case studies from content collection based on language
-const allCaseStudies = await getCollection("casestudies", ({ data }) => !data.draft);
+const allCaseStudies = await getCollection(
+  "casestudies",
+  ({ data }) => !data.draft
+);
 
 // Group case studies by slug (without language prefix)
 const caseStudiesBySlug = {};
 
-allCaseStudies.forEach(entry => {
-  const [entryLang, baseSlug] = entry.slug.split('/');
+allCaseStudies.forEach((entry) => {
+  const [entryLang, baseSlug] = entry.slug.split("/");
   if (!baseSlug) return;
-  
+
   if (!caseStudiesBySlug[baseSlug]) {
     caseStudiesBySlug[baseSlug] = {};
   }
-  
+
   caseStudiesBySlug[baseSlug][entryLang] = entry;
 });
 
@@ -40,27 +43,40 @@ const caseStudies = Object.entries(caseStudiesBySlug).map(([slug, entries]) => {
   <Container>
     <Sectionhead>
       <Fragment slot="title">
-        {lang === 'it' ? 'Case Studies' :
-         lang === 'en' ? 'Case Studies' :
-         lang === 'fr' ? 'Études de cas' :
-         lang === 'de' ? 'Fallstudien' : 'Case Studies'}
+        {
+          lang === "it"
+            ? "Case Studies"
+            : lang === "en"
+              ? "Case Studies"
+              : lang === "fr"
+                ? "Études de cas"
+                : lang === "de"
+                  ? "Fallstudien"
+                  : "Case Studies"
+        }
       </Fragment>
       <Fragment slot="desc">
-        {lang === 'it' ? 'Scopri come abbiamo aiutato le aziende a trasformare la loro presenza digitale' :
-         lang === 'en' ? 'See how we\'ve helped businesses transform their digital presence' :
-         lang === 'fr' ? 'Découvrez comment nous avons aidé les entreprises à transformer leur présence numérique' :
-         lang === 'de' ? 'Sehen Sie, wie wir Unternehmen geholfen haben, ihre digitale Präsenz zu transformieren' :
-         'Scopri come abbiamo aiutato le aziende a trasformare la loro presenza digitale'}
+        {
+          lang === "it"
+            ? "Scopri come abbiamo aiutato le aziende a trasformare la loro presenza digitale"
+            : lang === "en"
+              ? "See how we've helped businesses transform their digital presence"
+              : lang === "fr"
+                ? "Découvrez comment nous avons aidé les entreprises à transformer leur présence numérique"
+                : lang === "de"
+                  ? "Sehen Sie, wie wir Unternehmen geholfen haben, ihre digitale Präsenz zu transformieren"
+                  : "Scopri come abbiamo aiutato le aziende a trasformare la loro presenza digitale"
+        }
       </Fragment>
     </Sectionhead>
-    
+
     <div class="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-16 mt-16">
       {
         caseStudies.map((study) => (
           <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 place-self-center">
-            <a href={`/fr/casestudies/${study.slug.split('/')[1]}`}>
-              <Picture 
-                src={study.data.image.src} 
+            <a href={`/fr/casestudies/${study.slug.split("/")[1]}`}>
+              <Picture
+                src={study.data.image.src}
                 alt={study.data.image.alt}
                 width={400}
                 height={300}
@@ -74,7 +90,7 @@ const caseStudies = Object.entries(caseStudiesBySlug).map(([slug, entries]) => {
                   {study.data.snippet}
                 </p>
                 {study.data.services.map((service) => (
-                  <span class="inline-flex mr-2 items-center px-3 py-1 text-[14px] bg-black text-center text-white solutions rounded-sm focus:ring-4">
+                  <span class="inline-flex items-center rounded-md bg-black px-4 py-1 mb-2 mr-2 text-sm text-white ring-1 ring-inset ring-blue-700/10">
                     {service}
                   </span>
                 ))}
