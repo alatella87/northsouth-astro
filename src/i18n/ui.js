@@ -47,12 +47,159 @@ export const ui = {
     // Tools
     "tools.title": "Strumenti",
     
+    // Strategy page
+    "strategy.nav.services": "I nostri servizi",
+    "strategy.hero.title": "Northsouth Strategy",
+    "strategy.mainTitle": "Processo UX",
+    "strategy.mainDescription": "Il nostro processo UX è un approccio sistematico alla progettazione di esperienze utente intuitive, efficaci e piacevoli. Combiniamo ricerca utente, design thinking potenziato dall'IA e test iterativi per creare prodotti digitali che soddisfano sia le esigenze degli utenti che gli obiettivi aziendali.",
+    "strategy.approachTitle": "Il nostro approccio",
+    "strategy.approachQuote": "I prodotti digitali di maggior successo nascono all'intersezione tra esigenze degli utenti, obiettivi aziendali e possibilità tecnologiche. Il nostro processo UX potenziato dall'IA ci assicura di trovare questo punto d'incontro combinando approfondite conoscenze degli utenti con soluzioni di design innovative e sperimentazione rapida.",
+    "strategy.approachBy": "Mariano Zunini | Direttore Strategia UX",
+    
+    // Strategy Steps
+    "strategy.steps.1.type": "Scoperta & Ricerca",
+    "strategy.steps.1.definition": "Conduciamo ricerche approfondite sugli utenti e analisi di business per comprendere lo spazio del problema, le esigenze degli utenti e il contesto di mercato, potenziate dall'analisi dei dati guidata dall'IA.",
+    "strategy.steps.1.internalTools.0": "Interviste Utenti",
+    "strategy.steps.1.internalTools.1": "Analisi Competitiva",
+    "strategy.steps.1.internalTools.2": "Analisi Dati IA",
+    
+    "strategy.steps.2.type": "Definizione & Ideazione",
+    "strategy.steps.2.definition": "Definiamo lo spazio del problema e generiamo soluzioni innovative utilizzando metodologie di design thinking potenziate da strumenti di creatività IA per un'esplorazione più ampia.",
+    "strategy.steps.2.internalTools.0": "Workshop di Design",
+    "strategy.steps.2.internalTools.1": "Sviluppo Personas",
+    "strategy.steps.2.internalTools.2": "Mappatura del Percorso",
+    "strategy.steps.2.internalTools.3": "Ideazione Assistita da IA",
+    "strategy.steps.2.externalTools": "Figma, Miro, Midjourney, DALL-E",
+    
+    "strategy.steps.3.type": "Prototipazione & Design",
+    "strategy.steps.3.definition": "Creiamo prototipi interattivi e sistemi di design che danno vita alla soluzione, permettendo test e feedback precoci, garantendo al contempo coerenza su tutte le piattaforme.",
+    "strategy.steps.3.internalTools.0": "Wireframing",
+    "strategy.steps.3.internalTools.1": "Prototipazione",
+    "strategy.steps.3.externalTools": "Figma, Adobe XD, Sketch",
+    
+    "strategy.steps.4.type": "Test & Validazione",
+    "strategy.steps.4.definition": "Testiamo i prototipi con utenti reali per raccogliere insights e validare ipotesi, utilizzando sia metodologie di test tradizionali che potenziate dall'IA.",
+    "strategy.steps.4.internalTools.0": "Test di Usabilità",
+    "strategy.steps.4.internalTools.1": "Test A/B",
+    "strategy.steps.4.externalTools": "UserTesting, Hotjar, Maze",
+    
+    "strategy.steps.5.type": "Implementazione & Iterazione",
+    "strategy.steps.5.definition": "Lavoriamo a stretto contatto con i team di sviluppo per implementare il design e migliorare continuamente l'esperienza in base al feedback degli utenti e ai dati di performance.",
+    "strategy.steps.5.internalTools.0": "Consegna del Design",
+    "strategy.steps.5.internalTools.1": "Analisi Utenti",
+    "strategy.steps.5.internalTools.2": "Feedback Continuo",
+    "strategy.steps.5.externalTools": "Zeplin, Abstract, Strumenti di Analisi",
+    
+    // Features (Organizational Impact Levels)
+    "strategy.features.title": "Livelli di Impatto UX",
+    "strategy.features.1.type": "Strategico",
+    "strategy.features.1.description": "Ti aiutiamo a definire una visione e strategia UX allineata con gli obiettivi aziendali, che crea vantaggio competitivo e posiziona i tuoi prodotti per il successo a lungo termine.",
+    "strategy.features.1.services.0": "Strategia UX",
+    "strategy.features.1.services.1": "Design System",
+    "strategy.features.1.services.2": "Visione Prodotto",
+    "strategy.features.1.services.3": "Analisi Competitiva",
+    "strategy.features.1.services.4": "Integrazione IA",
+    
+    "strategy.features.2.type": "Esperienza",
+    "strategy.features.2.description": "Progettiamo esperienze utente complete che creano connessioni emotive, risolvono efficacemente i problemi degli utenti e differenziano i tuoi prodotti sul mercato.",
+    "strategy.features.2.services.0": "Ricerca Utenti",
+    "strategy.features.2.services.1": "Mappatura Percorso",
+    "strategy.features.2.services.2": "Architettura Informativa",
+    "strategy.features.2.services.3": "Design dell'Interazione",
+    "strategy.features.2.services.4": "Test di Usabilità",
+    
+    "strategy.features.3.type": "Interfaccia",
+    "strategy.features.3.description": "Creiamo interfacce intuitive, accessibili e visivamente accattivanti che semplificano compiti complessi e guidano gli utenti senza sforzo verso i loro obiettivi.",
+    "strategy.features.3.services.0": "Design UI",
+    "strategy.features.3.services.1": "Design Visuale",
+    "strategy.features.3.services.2": "Prototipazione",
+    "strategy.features.3.services.3": "Accessibilità",
+    
+    // CTA
+    "strategy.cta.title": "Pronto a trasformare i tuoi prodotti digitali con un design centrato sull'uomo?",
+    "strategy.cta.button": "Prenota la tua consulenza UX",
+    
+    // Tools section
+    "strategy.tools.title": "Strumenti",
+    
     // Solutions page
     "solutions.title": "I nostri servizi",
     "solutions.division": "La divisione Northsouth Solutions offre una vasta gamma di servizi digitali per aiutare la tua azienda a crescere.",
     "solutions.paragraph1": "Dallo sviluppo di siti web e apps personalizzate, alla gestione di progetti di trasformazione digitale, al marketing digitale e alla consulenza IT, siamo qui per supportarti in ogni fase del tuo percorso digitale.",
     "solutions.paragraph2": "Siamo appassionati di tecnologia e ci impegniamo a offrire soluzioni innovative e di alta qualità che soddisfino le tue esigenze specifiche.",
     "solutions.paragraph3": "Contattaci oggi stesso per scoprire come possiamo aiutarti a raggiungere i tuoi obiettivi digitali.",
+    
+    // Solutions page with knowledge structure
+    "solutions.nav.services": "I nostri servizi",
+    "solutions.hero.title": "Northsouth Solutions",
+    "solutions.mainTitle": "Soluzioni Software",
+    "solutions.mainDescription": "Sviluppiamo soluzioni digitali moderne e scalabili con tecnologie frontend all'avanguardia. Il nostro focus è sulla creazione di esperienze utente intuitive e reattive che soddisfano le esigenze specifiche dei nostri clienti.",
+    "solutions.approachTitle": "Il nostro approccio",
+    "solutions.approachQuote": "Lo sviluppo agile combinato con tecnologie frontend moderne consente di creare rapidamente prototipi funzionali, validando le idee con gli utenti finali prima di investire in implementazioni complete, garantendo così soluzioni più efficaci e un time-to-market ridotto.",
+    "solutions.approachBy": "Alessandro Latella | CTO",
+    
+    // Solutions Steps
+    "solutions.steps.1.type": "Prototipazione Frontend-First",
+    "solutions.steps.1.definition": "Creiamo rapidamente interfacce funzionali utilizzando tecnologie frontend moderne con assistenza AI per accelerare lo sviluppo.",
+    "solutions.steps.1.internalTools.0": "React",
+    "solutions.steps.1.internalTools.1": "Vue.js",
+    "solutions.steps.1.internalTools.2": "AI Pair Programming",
+    
+    "solutions.steps.2.type": "Validazione con utenti",
+    "solutions.steps.2.definition": "Testiamo i prototipi con utenti reali per raccogliere feedback e perfezionare l'esperienza utente prima dell'implementazione completa.",
+    "solutions.steps.2.internalTools.0": "User Testing",
+    "solutions.steps.2.internalTools.1": "Analisi UX",
+    "solutions.steps.2.internalTools.2": "A/B Testing",
+    "solutions.steps.2.internalTools.3": "Heatmaps",
+    "solutions.steps.2.externalTools": "Figma, Hotjar, UserTesting",
+    
+    "solutions.steps.3.type": "Sviluppo iterativo",
+    "solutions.steps.3.definition": "Implementiamo la soluzione completa attraverso cicli iterativi, integrando costantemente feedback e miglioramenti.",
+    "solutions.steps.3.internalTools.0": "Agile Sprints",
+    "solutions.steps.3.internalTools.1": "CI/CD",
+    "solutions.steps.3.externalTools": "GitHub, GitLab, Jira",
+    
+    "solutions.steps.4.type": "Test con stakeholders",
+    "solutions.steps.4.definition": "Valutiamo la soluzione con tutti gli stakeholder per garantire che soddisfi gli obiettivi aziendali e le aspettative degli utenti.",
+    "solutions.steps.4.internalTools.0": "Demo Sessions",
+    "solutions.steps.4.externalTools": "Teams, Zoom, Google Meet",
+    
+    "solutions.steps.5.type": "Ottimizzazione continua",
+    "solutions.steps.5.definition": "Monitoriamo le performance e raccogliamo feedback per migliorare continuamente la soluzione dopo il lancio.",
+    "solutions.steps.5.internalTools.0": "Analytics",
+    "solutions.steps.5.internalTools.1": "Performance Monitoring",
+    "solutions.steps.5.internalTools.2": "Feedback Loop",
+    "solutions.steps.5.externalTools": "Google Analytics, Sentry, Datadog",
+    
+    // Features (Organizational Impact Levels)
+    "solutions.features.title": "Livelli di impatto tecnologico",
+    "solutions.features.1.type": "Frontend-First Prototyping",
+    "solutions.features.1.description": "Utilizziamo un approccio di prototipazione rapida con tecnologie frontend per validare concetti e ridurre i tempi di sviluppo.",
+    "solutions.features.1.services.0": "Prototipazione AI-Assisted",
+    "solutions.features.1.services.1": "Validazione utente",
+    "solutions.features.1.services.2": "Test A/B",
+    "solutions.features.1.services.3": "Design System",
+    "solutions.features.1.services.4": "UI Components",
+    
+    "solutions.features.2.type": "Sviluppo Full-Stack",
+    "solutions.features.2.description": "Sviluppiamo soluzioni complete integrando frontend moderno con backend robusti e scalabili.",
+    "solutions.features.2.services.0": "API Development",
+    "solutions.features.2.services.1": "Database Design",
+    "solutions.features.2.services.2": "Cloud Integration",
+    "solutions.features.2.services.3": "Authentication",
+    "solutions.features.2.services.4": "Performance",
+    
+    "solutions.features.3.type": "DevOps & Deployment",
+    "solutions.features.3.description": "Implementiamo pratiche DevOps per garantire deployment continuo, monitoraggio e alta affidabilità.",
+    "solutions.features.3.services.0": "CI/CD",
+    "solutions.features.3.services.1": "Testing Automation",
+    "solutions.features.3.services.2": "Monitoring",
+    "solutions.features.3.services.3": "Scaling",
+    
+    "solutions.cta.title": "Pronto a trasformare la tua visione in software?",
+    "solutions.cta.button": "Prenota una consulenza",
+    
+    "solutions.tools.title": "Tecnologie",
 
     // Navbar
     'nav.home': 'Home',
@@ -201,6 +348,78 @@ export const ui = {
     "solutions.paragraph1": "Du développement de sites web et d'applications personnalisés à la gestion de projets de transformation numérique, en passant par le marketing digital et le conseil informatique, nous sommes là pour vous accompagner à chaque étape de votre parcours numérique.",
     "solutions.paragraph2": "Nous sommes passionnés par la technologie et nous nous engageons à offrir des solutions innovantes et de haute qualité qui répondent à vos besoins spécifiques.",
     "solutions.paragraph3": "Contactez-nous dès aujourd'hui pour découvrir comment nous pouvons vous aider à atteindre vos objectifs numériques.",
+    
+    // Solutions page with knowledge structure
+    "solutions.nav.services": "Nos services",
+    "solutions.hero.title": "Northsouth Solutions",
+    "solutions.mainTitle": "Solutions Logicielles",
+    "solutions.mainDescription": "Nous développons des solutions numériques modernes et évolutives avec des technologies frontend de pointe. Notre objectif est de créer des expériences utilisateur intuitives et réactives qui répondent aux besoins spécifiques de nos clients.",
+    "solutions.approachTitle": "Notre approche",
+    "solutions.approachQuote": "Le développement agile combiné aux technologies frontend modernes permet de créer rapidement des prototypes fonctionnels, validant les idées avec les utilisateurs finaux avant d'investir dans des implémentations complètes, garantissant ainsi des solutions plus efficaces et un délai de mise sur le marché réduit.",
+    "solutions.approachBy": "Alessandro Latella | CTO",
+    
+    // Solutions Steps
+    "solutions.steps.1.type": "Prototypage Frontend-First",
+    "solutions.steps.1.definition": "Nous créons rapidement des interfaces fonctionnelles en utilisant des technologies frontend modernes avec assistance IA pour accélérer le développement.",
+    "solutions.steps.1.internalTools.0": "React",
+    "solutions.steps.1.internalTools.1": "Vue.js",
+    "solutions.steps.1.internalTools.2": "IA Pair Programming",
+    
+    "solutions.steps.2.type": "Validation utilisateur",
+    "solutions.steps.2.definition": "Nous testons les prototypes avec des utilisateurs réels pour recueillir des retours et affiner l'expérience utilisateur avant l'implémentation complète.",
+    "solutions.steps.2.internalTools.0": "User Testing",
+    "solutions.steps.2.internalTools.1": "Analyse UX",
+    "solutions.steps.2.internalTools.2": "Tests A/B",
+    "solutions.steps.2.internalTools.3": "Heatmaps",
+    "solutions.steps.2.externalTools": "Figma, Hotjar, UserTesting",
+    
+    "solutions.steps.3.type": "Développement itératif",
+    "solutions.steps.3.definition": "Nous implémentons la solution complète à travers des cycles itératifs, en intégrant constamment des retours et des améliorations.",
+    "solutions.steps.3.internalTools.0": "Sprints Agile",
+    "solutions.steps.3.internalTools.1": "CI/CD",
+    "solutions.steps.3.externalTools": "GitHub, GitLab, Jira",
+    
+    "solutions.steps.4.type": "Test avec les parties prenantes",
+    "solutions.steps.4.definition": "Nous évaluons la solution avec toutes les parties prenantes pour garantir qu'elle répond aux objectifs commerciaux et aux attentes des utilisateurs.",
+    "solutions.steps.4.internalTools.0": "Sessions de démo",
+    "solutions.steps.4.externalTools": "Teams, Zoom, Google Meet",
+    
+    "solutions.steps.5.type": "Optimisation continue",
+    "solutions.steps.5.definition": "Nous surveillons les performances et recueillons des retours pour améliorer continuellement la solution après son lancement.",
+    "solutions.steps.5.internalTools.0": "Analytics",
+    "solutions.steps.5.internalTools.1": "Surveillance des performances",
+    "solutions.steps.5.internalTools.2": "Boucle de feedback",
+    "solutions.steps.5.externalTools": "Google Analytics, Sentry, Datadog",
+    
+    // Features (Organizational Impact Levels)
+    "solutions.features.title": "Niveaux d'impact technologique",
+    "solutions.features.1.type": "Frontend-First Prototyping",
+    "solutions.features.1.description": "Nous utilisons une approche de prototypage rapide avec des technologies frontend pour valider les concepts et réduire les temps de développement.",
+    "solutions.features.1.services.0": "Prototypage assisté par IA",
+    "solutions.features.1.services.1": "Validation utilisateur",
+    "solutions.features.1.services.2": "Tests A/B",
+    "solutions.features.1.services.3": "Design System",
+    "solutions.features.1.services.4": "Composants UI",
+    
+    "solutions.features.2.type": "Développement Full-Stack",
+    "solutions.features.2.description": "Nous développons des solutions complètes en intégrant un frontend moderne avec des backends robustes et évolutifs.",
+    "solutions.features.2.services.0": "Développement API",
+    "solutions.features.2.services.1": "Conception de base de données",
+    "solutions.features.2.services.2": "Intégration Cloud",
+    "solutions.features.2.services.3": "Authentification",
+    "solutions.features.2.services.4": "Performance",
+    
+    "solutions.features.3.type": "DevOps & Déploiement",
+    "solutions.features.3.description": "Nous implémentons des pratiques DevOps pour garantir un déploiement continu, une surveillance et une haute fiabilité.",
+    "solutions.features.3.services.0": "CI/CD",
+    "solutions.features.3.services.1": "Automatisation des tests",
+    "solutions.features.3.services.2": "Monitoring",
+    "solutions.features.3.services.3": "Scaling",
+    
+    "solutions.cta.title": "Prêt à transformer votre vision en logiciel?",
+    "solutions.cta.button": "Réservez une consultation",
+    
+    "solutions.tools.title": "Technologies",
   
     // Navbar
     'nav.home': 'Accueil',
@@ -300,7 +519,82 @@ export const ui = {
       "Prêt à optimiser la gestion des connaissances de votre organisation ?",
     "knowledge.cta.button": "Réserver votre consultation",
     // Tools section
-    "knowledge.tools.title": "Outils"
+    "knowledge.tools.title": "Outils",
+    
+    // Strategy page
+    "strategy.nav.services": "Nos services",
+    "strategy.hero.title": "Northsouth Stratégie",
+    "strategy.mainTitle": "Processus UX",
+    "strategy.mainDescription": "Notre processus UX est une approche systématique pour concevoir des expériences utilisateur intuitives, efficaces et agréables. Nous combinons la recherche utilisateur, la réflexion conceptuelle assistée par IA et les tests itératifs pour créer des produits numériques qui répondent à la fois aux besoins des utilisateurs et aux objectifs commerciaux.",
+    "strategy.approachTitle": "Notre approche",
+    "strategy.approachQuote": "Les produits numériques les plus réussis naissent à l'intersection des besoins des utilisateurs, des objectifs commerciaux et des possibilités technologiques. Notre processus UX amélioré par l'IA nous permet de trouver ce point optimal en combinant des insights utilisateurs approfondis avec des solutions de design innovantes et une expérimentation rapide.",
+    "strategy.approachBy": "Mariano Zunini | Directeur de la Stratégie UX",
+    
+    // Strategy Steps
+    "strategy.steps.1.type": "Découverte & Recherche",
+    "strategy.steps.1.definition": "Nous menons une recherche utilisateur complète et une analyse commerciale pour comprendre l'espace problématique, les besoins des utilisateurs et le contexte du marché, renforcés par une analyse de données pilotée par l'IA.",
+    "strategy.steps.1.internalTools.0": "Entretiens utilisateurs",
+    "strategy.steps.1.internalTools.1": "Analyse concurrentielle",
+    "strategy.steps.1.internalTools.2": "Analyse de données IA",
+    
+    "strategy.steps.2.type": "Définition & Idéation",
+    "strategy.steps.2.definition": "Nous définissons l'espace problématique et générons des solutions innovantes en utilisant des méthodologies de design thinking améliorées par des outils de créativité IA pour une exploration plus large.",
+    "strategy.steps.2.internalTools.0": "Ateliers de design",
+    "strategy.steps.2.internalTools.1": "Développement de personas",
+    "strategy.steps.2.internalTools.2": "Cartographie du parcours",
+    "strategy.steps.2.internalTools.3": "Idéation assistée par IA",
+    "strategy.steps.2.externalTools": "Figma, Miro, Midjourney, DALL-E",
+    
+    "strategy.steps.3.type": "Prototypage & Design",
+    "strategy.steps.3.definition": "Nous créons des prototypes interactifs et des systèmes de design qui donnent vie à la solution, permettant des tests précoces et des retours tout en assurant la cohérence sur toutes les plateformes.",
+    "strategy.steps.3.internalTools.0": "Wireframing",
+    "strategy.steps.3.internalTools.1": "Prototypage",
+    "strategy.steps.3.externalTools": "Figma, Adobe XD, Sketch",
+    
+    "strategy.steps.4.type": "Test & Validation",
+    "strategy.steps.4.definition": "Nous testons les prototypes avec des utilisateurs réels pour recueillir des insights et valider les hypothèses, en utilisant à la fois des méthodologies de test traditionnelles et améliorées par l'IA.",
+    "strategy.steps.4.internalTools.0": "Tests d'utilisabilité",
+    "strategy.steps.4.internalTools.1": "Tests A/B",
+    "strategy.steps.4.externalTools": "UserTesting, Hotjar, Maze",
+    
+    "strategy.steps.5.type": "Implémentation & Itération",
+    "strategy.steps.5.definition": "Nous travaillons en étroite collaboration avec les équipes de développement pour implémenter le design et améliorer continuellement l'expérience en fonction des retours utilisateurs et des données de performance.",
+    "strategy.steps.5.internalTools.0": "Transfert de design",
+    "strategy.steps.5.internalTools.1": "Analytique utilisateur",
+    "strategy.steps.5.internalTools.2": "Feedback continu",
+    "strategy.steps.5.externalTools": "Zeplin, Abstract, Outils d'analytique",
+    
+    // Features (Organizational Impact Levels)
+    "strategy.features.title": "Niveaux d'impact UX",
+    "strategy.features.1.type": "Stratégique",
+    "strategy.features.1.description": "Nous vous aidons à définir une vision et une stratégie UX qui s'alignent sur les objectifs commerciaux, créent un avantage concurrentiel et positionnent vos produits pour un succès à long terme.",
+    "strategy.features.1.services.0": "Stratégie UX",
+    "strategy.features.1.services.1": "Système de design",
+    "strategy.features.1.services.2": "Vision produit",
+    "strategy.features.1.services.3": "Analyse concurrentielle",
+    "strategy.features.1.services.4": "Intégration IA",
+    
+    "strategy.features.2.type": "Expérience",
+    "strategy.features.2.description": "Nous concevons des expériences utilisateur complètes qui créent des connexions émotionnelles, résolvent efficacement les problèmes des utilisateurs et différencient vos produits sur le marché.",
+    "strategy.features.2.services.0": "Recherche utilisateur",
+    "strategy.features.2.services.1": "Cartographie du parcours",
+    "strategy.features.2.services.2": "Architecture de l'information",
+    "strategy.features.2.services.3": "Design d'interaction",
+    "strategy.features.2.services.4": "Tests d'utilisabilité",
+    
+    "strategy.features.3.type": "Interface",
+    "strategy.features.3.description": "Nous créons des interfaces intuitives, accessibles et visuellement attrayantes qui simplifient les tâches complexes et guident les utilisateurs sans effort vers leurs objectifs.",
+    "strategy.features.3.services.0": "Design UI",
+    "strategy.features.3.services.1": "Design visuel",
+    "strategy.features.3.services.2": "Prototypage",
+    "strategy.features.3.services.3": "Accessibilité",
+    
+    // CTA
+    "strategy.cta.title": "Prêt à transformer vos produits numériques avec un design centré sur l'humain?",
+    "strategy.cta.button": "Réservez votre consultation UX",
+    
+    // Tools section
+    "strategy.tools.title": "Outils"
   },
   de: {
     // Misc
@@ -347,6 +641,78 @@ export const ui = {
     "solutions.paragraph1": "Von der Entwicklung maßgeschneiderter Websites und Apps über die Betreuung digitaler Transformationsprojekte bis hin zu digitalem Marketing und IT-Beratung stehen wir Ihnen bei jedem Schritt Ihrer digitalen Reise zur Seite.",
     "solutions.paragraph2": "Wir sind leidenschaftlich an Technologie interessiert und verpflichten uns, innovative und hochwertige Lösungen anzubieten, die Ihren spezifischen Anforderungen entsprechen.",
     "solutions.paragraph3": "Kontaktieren Sie uns noch heute, um zu erfahren, wie wir Ihnen helfen können, Ihre digitalen Ziele zu erreichen.",
+    
+    // Solutions page with knowledge structure
+    "solutions.nav.services": "Unsere Dienstleistungen",
+    "solutions.hero.title": "Northsouth Solutions",
+    "solutions.mainTitle": "Software-Lösungen",
+    "solutions.mainDescription": "Wir entwickeln moderne und skalierbare digitale Lösungen mit fortschrittlichen Frontend-Technologien. Unser Fokus liegt auf der Schaffung intuitiver und reaktiver Benutzererfahrungen, die den spezifischen Anforderungen unserer Kunden entsprechen.",
+    "solutions.approachTitle": "Unser Ansatz",
+    "solutions.approachQuote": "Agile Entwicklung in Kombination mit modernen Frontend-Technologien ermöglicht es, schnell funktionale Prototypen zu erstellen, Ideen mit Endbenutzern zu validieren, bevor in vollständige Implementierungen investiert wird, und so effektivere Lösungen und kürzere Markteinführungszeiten zu gewährleisten.",
+    "solutions.approachBy": "Alessandro Latella | CTOs",
+    
+    // Solutions Steps
+    "solutions.steps.1.type": "Frontend-First Prototyping",
+    "solutions.steps.1.definition": "Wir erstellen schnell funktionale Schnittstellen mit modernen Frontend-Technologien und KI-Unterstützung, um die Entwicklung zu beschleunigen.",
+    "solutions.steps.1.internalTools.0": "React",
+    "solutions.steps.1.internalTools.1": "Vue.js",
+    "solutions.steps.1.internalTools.2": "KI-Pair-Programming",
+    
+    "solutions.steps.2.type": "Benutzervalidierung",
+    "solutions.steps.2.definition": "Wir testen Prototypen mit echten Benutzern, um Feedback zu sammeln und die Benutzererfahrung vor der vollständigen Implementierung zu verfeinern.",
+    "solutions.steps.2.internalTools.0": "User Testing",
+    "solutions.steps.2.internalTools.1": "UX-Analyse",
+    "solutions.steps.2.internalTools.2": "A/B-Tests",
+    "solutions.steps.2.internalTools.3": "Heatmaps",
+    "solutions.steps.2.externalTools": "Figma, Hotjar, UserTesting",
+    
+    "solutions.steps.3.type": "Iterative Entwicklung",
+    "solutions.steps.3.definition": "Wir implementieren die vollständige Lösung in iterativen Zyklen und integrieren kontinuierlich Feedback und Verbesserungen.",
+    "solutions.steps.3.internalTools.0": "Agile Sprints",
+    "solutions.steps.3.internalTools.1": "CI/CD",
+    "solutions.steps.3.externalTools": "GitHub, GitLab, Jira",
+    
+    "solutions.steps.4.type": "Stakeholder-Tests",
+    "solutions.steps.4.definition": "Wir bewerten die Lösung mit allen Stakeholdern, um sicherzustellen, dass sie die Geschäftsziele und Benutzererwartungen erfüllt.",
+    "solutions.steps.4.internalTools.0": "Demo-Sessions",
+    "solutions.steps.4.externalTools": "Teams, Zoom, Google Meet",
+    
+    "solutions.steps.5.type": "Kontinuierliche Optimierung",
+    "solutions.steps.5.definition": "Wir überwachen die Leistung und sammeln Feedback, um die Lösung nach dem Start kontinuierlich zu verbessern.",
+    "solutions.steps.5.internalTools.0": "Analytics",
+    "solutions.steps.5.internalTools.1": "Performance-Monitoring",
+    "solutions.steps.5.internalTools.2": "Feedback-Schleife",
+    "solutions.steps.5.externalTools": "Google Analytics, Sentry, Datadog",
+    
+    // Features (Organizational Impact Levels)
+    "solutions.features.title": "Technologische Wirkungsebenen",
+    "solutions.features.1.type": "Frontend-First Prototyping",
+    "solutions.features.1.description": "Wir verwenden einen schnellen Prototyping-Ansatz mit Frontend-Technologien, um Konzepte zu validieren und Entwicklungszeiten zu verkürzen.",
+    "solutions.features.1.services.0": "KI-unterstütztes Prototyping",
+    "solutions.features.1.services.1": "Benutzervalidierung",
+    "solutions.features.1.services.2": "A/B-Tests",
+    "solutions.features.1.services.3": "Design-System",
+    "solutions.features.1.services.4": "UI-Komponenten",
+    
+    "solutions.features.2.type": "Full-Stack-Entwicklung",
+    "solutions.features.2.description": "Wir entwickeln umfassende Lösungen, die modernes Frontend mit robusten und skalierbaren Backends integrieren.",
+    "solutions.features.2.services.0": "API-Entwicklung",
+    "solutions.features.2.services.1": "Datenbankdesign",
+    "solutions.features.2.services.2": "Cloud-Integration",
+    "solutions.features.2.services.3": "Authentifizierung",
+    "solutions.features.2.services.4": "Performance",
+    
+    "solutions.features.3.type": "DevOps & Deployment",
+    "solutions.features.3.description": "Wir implementieren DevOps-Praktiken, um kontinuierliches Deployment, Überwachung und hohe Zuverlässigkeit zu gewährleisten.",
+    "solutions.features.3.services.0": "CI/CD",
+    "solutions.features.3.services.1": "Test-Automatisierung",
+    "solutions.features.3.services.2": "Monitoring",
+    "solutions.features.3.services.3": "Skalierung",
+    
+    "solutions.cta.title": "Bereit, Ihre Vision in Software zu verwandeln?",
+    "solutions.cta.button": "Buchen Sie eine Beratung",
+    
+    "solutions.tools.title": "Technologien",
 
     // Navbar
     'nav.home': 'Startseite',
@@ -445,7 +811,82 @@ export const ui = {
       "Bereit, das Wissensmanagement Ihrer Organisation zu optimieren?",
     "knowledge.cta.button": "Buchen Sie Ihre Beratung",
     // Tools section
-    "knowledge.tools.title": "Tools"
+    "knowledge.tools.title": "Werkzeuge",
+    
+    // Strategy page
+    "strategy.nav.services": "Unsere Dienstleistungen",
+    "strategy.hero.title": "Northsouth Strategie",
+    "strategy.mainTitle": "UX-Prozess",
+    "strategy.mainDescription": "Unser UX-Prozess ist ein systematischer Ansatz zur Gestaltung von Benutzererfahrungen, die intuitiv, effektiv und ansprechend sind. Wir kombinieren Benutzerforschung, KI-gestütztes Design Thinking und iteratives Testen, um digitale Produkte zu schaffen, die sowohl Benutzerbedürfnisse als auch Geschäftsziele erfüllen.",
+    "strategy.approachTitle": "Unser Ansatz",
+    "strategy.approachQuote": "Die erfolgreichsten digitalen Produkte entstehen an der Schnittstelle von Benutzerbedürfnissen, Geschäftszielen und technologischen Möglichkeiten. Unser KI-erweiterter UX-Prozess stellt sicher, dass wir diesen Sweet Spot finden, indem wir tiefe Benutzereinblicke mit innovativen Designlösungen und schneller Experimentierung kombinieren.",
+    "strategy.approachBy": "Mariano Zunini | UX-Strategiedirektor",
+    
+    // Strategy Steps
+    "strategy.steps.1.type": "Entdeckung & Forschung",
+    "strategy.steps.1.definition": "Wir führen umfassende Benutzerforschung und Geschäftsanalysen durch, um den Problemraum, Benutzerbedürfnisse und den Marktkontext zu verstehen, ergänzt durch KI-gestützte Datenanalyse.",
+    "strategy.steps.1.internalTools.0": "Benutzerinterviews",
+    "strategy.steps.1.internalTools.1": "Wettbewerbsanalyse",
+    "strategy.steps.1.internalTools.2": "KI-Datenanalyse",
+    
+    "strategy.steps.2.type": "Definition & Ideenfindung",
+    "strategy.steps.2.definition": "Wir definieren den Problemraum und generieren innovative Lösungen mithilfe von Design-Thinking-Methoden, die durch KI-Kreativitätstools für eine breitere Exploration erweitert werden.",
+    "strategy.steps.2.internalTools.0": "Design-Workshops",
+    "strategy.steps.2.internalTools.1": "Persona-Entwicklung",
+    "strategy.steps.2.internalTools.2": "Journey Mapping",
+    "strategy.steps.2.internalTools.3": "KI-unterstützte Ideenfindung",
+    "strategy.steps.2.externalTools": "Figma, Miro, Midjourney, DALL-E",
+    
+    "strategy.steps.3.type": "Prototyping & Design",
+    "strategy.steps.3.definition": "Wir erstellen interaktive Prototypen und Designsysteme, die die Lösung zum Leben erwecken, frühes Testen und Feedback ermöglichen und gleichzeitig Konsistenz über alle Plattformen hinweg gewährleisten.",
+    "strategy.steps.3.internalTools.0": "Wireframing",
+    "strategy.steps.3.internalTools.1": "Prototyping",
+    "strategy.steps.3.externalTools": "Figma, Adobe XD, Sketch",
+    
+    "strategy.steps.4.type": "Testen & Validierung",
+    "strategy.steps.4.definition": "Wir testen Prototypen mit echten Benutzern, um Erkenntnisse zu sammeln und Annahmen zu validieren, wobei wir sowohl traditionelle als auch KI-erweiterte Testmethoden einsetzen.",
+    "strategy.steps.4.internalTools.0": "Usability-Tests",
+    "strategy.steps.4.internalTools.1": "A/B-Tests",
+    "strategy.steps.4.externalTools": "UserTesting, Hotjar, Maze",
+    
+    "strategy.steps.5.type": "Implementierung & Iteration",
+    "strategy.steps.5.definition": "Wir arbeiten eng mit Entwicklungsteams zusammen, um das Design zu implementieren und die Erfahrung kontinuierlich auf der Grundlage von Benutzerfeedback und Leistungsdaten zu verbessern.",
+    "strategy.steps.5.internalTools.0": "Design-Übergabe",
+    "strategy.steps.5.internalTools.1": "Benutzeranalyse",
+    "strategy.steps.5.internalTools.2": "Kontinuierliches Feedback",
+    "strategy.steps.5.externalTools": "Zeplin, Abstract, Analysetools",
+    
+    // Features (Organizational Impact Levels)
+    "strategy.features.title": "UX-Wirkungsebenen",
+    "strategy.features.1.type": "Strategisch",
+    "strategy.features.1.description": "Wir helfen Ihnen, eine UX-Vision und -Strategie zu definieren, die mit Geschäftszielen übereinstimmt, Wettbewerbsvorteile schafft und Ihre Produkte für langfristigen Erfolg positioniert.",
+    "strategy.features.1.services.0": "UX-Strategie",
+    "strategy.features.1.services.1": "Designsystem",
+    "strategy.features.1.services.2": "Produktvision",
+    "strategy.features.1.services.3": "Wettbewerbsanalyse",
+    "strategy.features.1.services.4": "KI-Integration",
+    
+    "strategy.features.2.type": "Erfahrung",
+    "strategy.features.2.description": "Wir gestalten umfassende Benutzererfahrungen, die emotionale Verbindungen schaffen, Benutzerprobleme effektiv lösen und Ihre Produkte auf dem Markt differenzieren.",
+    "strategy.features.2.services.0": "Benutzerforschung",
+    "strategy.features.2.services.1": "Journey Mapping",
+    "strategy.features.2.services.2": "Informationsarchitektur",
+    "strategy.features.2.services.3": "Interaktionsdesign",
+    "strategy.features.2.services.4": "Usability-Tests",
+    
+    "strategy.features.3.type": "Schnittstelle",
+    "strategy.features.3.description": "Wir erstellen intuitive, zugängliche und visuell ansprechende Schnittstellen, die komplexe Aufgaben vereinfachen und Benutzer mühelos zu ihren Zielen führen.",
+    "strategy.features.3.services.0": "UI-Design",
+    "strategy.features.3.services.1": "Visuelles Design",
+    "strategy.features.3.services.2": "Prototyping",
+    "strategy.features.3.services.3": "Barrierefreiheit",
+    
+    // CTA
+    "strategy.cta.title": "Bereit, Ihre digitalen Produkte mit menschenzentriertem Design zu transformieren?",
+    "strategy.cta.button": "Buchen Sie Ihre UX-Beratung",
+    
+    // Tools section
+    "strategy.tools.title": "Tools"
   },
   en: {
     // Misc
@@ -492,6 +933,78 @@ export const ui = {
     "solutions.paragraph1": "From developing custom websites and apps, to managing digital transformation projects, digital marketing and IT consulting, we are here to support you in every step of your digital journey.",
     "solutions.paragraph2": "We are passionate about technology and committed to offering innovative and high-quality solutions that meet your specific needs.",
     "solutions.paragraph3": "Contact us today to discover how we can help you achieve your digital goals.",
+    
+    // Solutions page with knowledge structure
+    "solutions.nav.services": "Our Services",
+    "solutions.hero.title": "Northsouth Solutions",
+    "solutions.mainTitle": "Software Solutions",
+    "solutions.mainDescription": "We develop modern and scalable digital solutions with cutting-edge frontend technologies. Our focus is on creating intuitive and responsive user experiences that meet the specific needs of our clients.",
+    "solutions.approachTitle": "Our Approach",
+    "solutions.approachQuote": "Agile development combined with modern frontend technologies enables rapid creation of functional prototypes, validating ideas with end users before investing in full implementations, ensuring more effective solutions and reduced time-to-market.",
+    "solutions.approachBy": "Alessandro Latella | CTO",
+    
+    // Solutions Steps
+    "solutions.steps.1.type": "Frontend-First Prototyping",
+    "solutions.steps.1.definition": "We rapidly create functional interfaces using modern frontend technologies with AI assistance to accelerate development.",
+    "solutions.steps.1.internalTools.0": "React",
+    "solutions.steps.1.internalTools.1": "Vue.js",
+    "solutions.steps.1.internalTools.2": "AI Pair Programming",
+    
+    "solutions.steps.2.type": "User Validation",
+    "solutions.steps.2.definition": "We test prototypes with real users to gather feedback and refine the user experience before full implementation.",
+    "solutions.steps.2.internalTools.0": "User Testing",
+    "solutions.steps.2.internalTools.1": "UX Analysis",
+    "solutions.steps.2.internalTools.2": "A/B Testing",
+    "solutions.steps.2.internalTools.3": "Heatmaps",
+    "solutions.steps.2.externalTools": "Figma, Hotjar, UserTesting",
+    
+    "solutions.steps.3.type": "Iterative Development",
+    "solutions.steps.3.definition": "We implement the complete solution through iterative cycles, continuously integrating feedback and improvements.",
+    "solutions.steps.3.internalTools.0": "Agile Sprints",
+    "solutions.steps.3.internalTools.1": "CI/CD",
+    "solutions.steps.3.externalTools": "GitHub, GitLab, Jira",
+    
+    "solutions.steps.4.type": "Stakeholder Testing",
+    "solutions.steps.4.definition": "We evaluate the solution with all stakeholders to ensure it meets business objectives and user expectations.",
+    "solutions.steps.4.internalTools.0": "Demo Sessions",
+    "solutions.steps.4.externalTools": "Teams, Zoom, Google Meet",
+    
+    "solutions.steps.5.type": "Continuous Optimization",
+    "solutions.steps.5.definition": "We monitor performance and gather feedback to continuously improve the solution after launch.",
+    "solutions.steps.5.internalTools.0": "Analytics",
+    "solutions.steps.5.internalTools.1": "Performance Monitoring",
+    "solutions.steps.5.internalTools.2": "Feedback Loop",
+    "solutions.steps.5.externalTools": "Google Analytics, Sentry, Datadog",
+    
+    // Features (Organizational Impact Levels)
+    "solutions.features.title": "Technology Impact Levels",
+    "solutions.features.1.type": "Frontend-First Prototyping",
+    "solutions.features.1.description": "We use a rapid prototyping approach with frontend technologies to validate concepts and reduce development times.",
+    "solutions.features.1.services.0": "AI-Assisted Prototyping",
+    "solutions.features.1.services.1": "User Validation",
+    "solutions.features.1.services.2": "A/B Testing",
+    "solutions.features.1.services.3": "Design System",
+    "solutions.features.1.services.4": "UI Components",
+    
+    "solutions.features.2.type": "Full-Stack Development",
+    "solutions.features.2.description": "We develop comprehensive solutions integrating modern frontend with robust and scalable backends.",
+    "solutions.features.2.services.0": "API Development",
+    "solutions.features.2.services.1": "Database Design",
+    "solutions.features.2.services.2": "Cloud Integration",
+    "solutions.features.2.services.3": "Authentication",
+    "solutions.features.2.services.4": "Performance",
+    
+    "solutions.features.3.type": "DevOps & Deployment",
+    "solutions.features.3.description": "We implement DevOps practices to ensure continuous deployment, monitoring, and high reliability.",
+    "solutions.features.3.services.0": "CI/CD",
+    "solutions.features.3.services.1": "Testing Automation",
+    "solutions.features.3.services.2": "Monitoring",
+    "solutions.features.3.services.3": "Scaling",
+    
+    "solutions.cta.title": "Ready to transform your vision into software?",
+    "solutions.cta.button": "Book a Consultation",
+    
+    "solutions.tools.title": "Technologies",
 
     // Navbar
     'nav.home': 'Home',
@@ -589,7 +1102,82 @@ export const ui = {
       "Ready to optimize your organization's knowledge management?",
     "knowledge.cta.button": "Book Your Consultation",
     // Tools section
-    "knowledge.tools.title": "Tools"
+    "knowledge.tools.title": "Tools",
+    
+    // Strategy page
+    "strategy.nav.services": "Our Services",
+    "strategy.hero.title": "Northsouth Strategy",
+    "strategy.mainTitle": "UX Process",
+    "strategy.mainDescription": "Our UX Process is a systematic approach to designing user experiences that are intuitive, effective, and delightful. We combine user research, AI-powered design thinking, and iterative testing to create digital products that meet both user needs and business objectives.",
+    "strategy.approachTitle": "Our Approach",
+    "strategy.approachQuote": "The most successful digital products are born at the intersection of user needs, business goals, and technological possibilities. Our AI-enhanced UX process ensures we find this sweet spot by combining deep user insights with innovative design solutions and rapid experimentation.",
+    "strategy.approachBy": "Mariano Zunini | UX Strategy Director",
+    
+    // Strategy Steps
+    "strategy.steps.1.type": "Discovery & Research",
+    "strategy.steps.1.definition": "We conduct comprehensive user research and business analysis to understand the problem space, user needs, and market context, augmented with AI-driven data analysis.",
+    "strategy.steps.1.internalTools.0": "User Interviews",
+    "strategy.steps.1.internalTools.1": "Competitive Analysis",
+    "strategy.steps.1.internalTools.2": "AI Data Analysis",
+    
+    "strategy.steps.2.type": "Definition & Ideation",
+    "strategy.steps.2.definition": "We define the problem space and generate innovative solutions using design thinking methodologies enhanced by AI creativity tools for broader exploration.",
+    "strategy.steps.2.internalTools.0": "Design Workshops",
+    "strategy.steps.2.internalTools.1": "Persona Development",
+    "strategy.steps.2.internalTools.2": "Journey Mapping",
+    "strategy.steps.2.internalTools.3": "AI-Assisted Ideation",
+    "strategy.steps.2.externalTools": "Figma, Miro, Midjourney, DALL-E",
+    
+    "strategy.steps.3.type": "Prototyping & Design",
+    "strategy.steps.3.definition": "We create interactive prototypes and design systems that bring the solution to life, allowing for early testing and feedback while ensuring consistency across platforms.",
+    "strategy.steps.3.internalTools.0": "Wireframing",
+    "strategy.steps.3.internalTools.1": "Prototyping",
+    "strategy.steps.3.externalTools": "Figma, Adobe XD, Sketch",
+    
+    "strategy.steps.4.type": "Testing & Validation",
+    "strategy.steps.4.definition": "We test prototypes with real users to gather insights and validate assumptions, using both traditional and AI-enhanced testing methodologies.",
+    "strategy.steps.4.internalTools.0": "Usability Testing",
+    "strategy.steps.4.internalTools.1": "A/B Testing",
+    "strategy.steps.4.externalTools": "UserTesting, Hotjar, Maze",
+    
+    "strategy.steps.5.type": "Implementation & Iteration",
+    "strategy.steps.5.definition": "We work closely with development teams to implement the design and continuously improve the experience based on user feedback and performance data.",
+    "strategy.steps.5.internalTools.0": "Design Handoff",
+    "strategy.steps.5.internalTools.1": "User Analytics",
+    "strategy.steps.5.internalTools.2": "Continuous Feedback",
+    "strategy.steps.5.externalTools": "Zeplin, Abstract, Analytics Tools",
+    
+    // Features (Organizational Impact Levels)
+    "strategy.features.title": "UX Impact Levels",
+    "strategy.features.1.type": "Strategic",
+    "strategy.features.1.description": "We help you define a UX vision and strategy that aligns with business goals, creates competitive advantage, and positions your products for long-term success.",
+    "strategy.features.1.services.0": "UX Strategy",
+    "strategy.features.1.services.1": "Design System",
+    "strategy.features.1.services.2": "Product Vision",
+    "strategy.features.1.services.3": "Competitive Analysis",
+    "strategy.features.1.services.4": "AI Integration",
+    
+    "strategy.features.2.type": "Experience",
+    "strategy.features.2.description": "We design comprehensive user experiences that create emotional connections, solve user problems effectively, and differentiate your products in the market.",
+    "strategy.features.2.services.0": "User Research",
+    "strategy.features.2.services.1": "Journey Mapping",
+    "strategy.features.2.services.2": "Information Architecture",
+    "strategy.features.2.services.3": "Interaction Design",
+    "strategy.features.2.services.4": "Usability Testing",
+    
+    "strategy.features.3.type": "Interface",
+    "strategy.features.3.description": "We create intuitive, accessible, and visually appealing interfaces that make complex tasks simple and guide users effortlessly toward their goals.",
+    "strategy.features.3.services.0": "UI Design",
+    "strategy.features.3.services.1": "Visual Design",
+    "strategy.features.3.services.2": "Prototyping",
+    "strategy.features.3.services.3": "Accessibility",
+    
+    // CTA
+    "strategy.cta.title": "Ready to transform your digital products with human-centered design?",
+    "strategy.cta.button": "Book Your UX Consultation",
+    
+    // Tools section
+    "strategy.tools.title": "Tools"
   }
 };
 
