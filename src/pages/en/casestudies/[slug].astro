@@ -2,6 +2,17 @@
 import { getCollection } from "astro:content";
 import Layout from "@layouts/Layout.astro";
 import Container from "@components/container.astro";
+import { Picture } from "astro:assets";
+
+// Import thumbnails
+import software from "../../../assets/thumbsHome/softwaregestionale.webp";
+import gmpro from "../../../assets/thumbsHome/gmpro.webp";
+import badilatti from "../../../assets/thumbsHome/badilatti.webp";
+import scuolaguida from "../../../assets/thumbsHome/scuolaguidalugano.webp";
+import farmatouch from "../../../assets/thumbsHome/farmatouch.webp";
+import naranja from "../../../assets/thumbsHome/naranja.webp";
+import sepoy from "../../../assets/thumbsHome/sepoy.webp";
+import whirlpool from "../../../assets/thumbsHome/whirlpool.webp";
 
 // Import translations
 import { getLangFromUrl, useTranslations } from "../../../i18n/utils";
@@ -47,6 +58,20 @@ const t = useTranslations(lang);
 // Select the appropriate language version or fall back to default
 const entry = entries[lang] || entries[defaultLang] || Object.values(entries)[0];
 const { Content } = await entry.render();
+
+// Function to get the correct image based on company name
+const getImageForCompany = (company) => {
+  if (company.includes('Badilatti')) return badilatti;
+  if (company.includes('DPStudio')) return software;
+  if (company.includes('Farmatouch')) return farmatouch;
+  if (company.includes('Naranja')) return naranja;
+  if (company.includes('Sepoy')) return sepoy;
+  if (company.includes('Whirlpool')) return whirlpool;
+  if (company.includes('GMPro')) return gmpro;
+  if (company.includes('Scuola Guida')) return scuolaguida;
+  // Default case if no match
+  return badilatti;
+};
 ---
 
 <Layout title={entry.data.title}>
@@ -77,15 +102,15 @@ const { Content } = await entry.render();
       </div>
     </div>
 
-    {entry.data.image && (
-      <div class="mx-auto max-w-4xl mt-10">
-        <img 
-          src={entry.data.image.src} 
-          alt={entry.data.image.alt || entry.data.company} 
-          class="w-full h-auto rounded-lg shadow-lg"
-        />
-      </div>
-    )}
+    <div class="mx-auto max-w-4xl mt-10">
+      <Picture 
+        src={getImageForCompany(entry.data.company)} 
+        alt={entry.data.image?.alt || `${entry.data.company} project image`} 
+        width={1200}
+        height={600}
+        class="w-full h-auto rounded-lg shadow-lg"
+      />
+    </div>
 
     <div class="mx-auto prose prose-lg mt-10 max-w-3xl">
       <Content />
