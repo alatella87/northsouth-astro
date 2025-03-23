@@ -5,6 +5,16 @@ import Container from "@components/container.astro";
 import Sectionhead from "@components/sectionhead.astro";
 import { Picture } from "astro:assets";
 
+// Import thumbnails
+import software from "../../assets/thumbsHome/softwaregestionale.webp";
+import gmpro from "../../assets/thumbsHome/gmpro.webp";
+import badilatti from "../../assets/thumbsHome/badilatti.webp";
+import scuolaguida from "../../assets/thumbsHome/scuolaguidalugano.webp";
+import farmatouch from "../../assets/thumbsHome/farmatouch.webp";
+import naranja from "../../assets/thumbsHome/naranja.webp";
+import sepoy from "../../assets/thumbsHome/sepoy.webp";
+import whirlpool from "../../assets/thumbsHome/whirlpool.webp";
+
 // Import translations
 import { getLangFromUrl, useTranslations } from "../../i18n/utils";
 import { defaultLang } from "../../i18n/ui";
@@ -34,6 +44,20 @@ allCaseStudies.forEach(entry => {
 const caseStudies = Object.entries(caseStudiesBySlug).map(([slug, entries]) => {
   return entries[lang] || entries[defaultLang] || Object.values(entries)[0];
 });
+
+// Function to get the correct image based on company name
+const getImageForCompany = (company) => {
+  if (company.includes('Badilatti')) return badilatti;
+  if (company.includes('DPStudio')) return software;
+  if (company.includes('Farmatouch')) return farmatouch;
+  if (company.includes('Naranja')) return naranja;
+  if (company.includes('Sepoy')) return sepoy;
+  if (company.includes('Whirlpool')) return whirlpool;
+  if (company.includes('GMPro')) return gmpro;
+  if (company.includes('Scuola Guida')) return scuolaguida;
+  // Default case if no match
+  return badilatti;
+};
 ---
 
 <Layout title="Fallstudien">
@@ -60,8 +84,8 @@ const caseStudies = Object.entries(caseStudiesBySlug).map(([slug, entries]) => {
           <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 place-self-center">
             <a href={`/de/casestudies/${study.slug.split('/')[1]}`}>
               <Picture 
-                src={study.data.image.src} 
-                alt={study.data.image.alt}
+                src={getImageForCompany(study.data.company)} 
+                alt={study.data.image.alt || `${study.data.company} project image`}
                 width={400}
                 height={300}
                 class="rounded-t-lg w-full object-cover"
