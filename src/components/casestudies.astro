@@ -1,7 +1,8 @@
 ---
-// @ts-ignore
-import Link from "./ui/link.astro";
+import { getCollection } from "astro:content";
 import { Picture } from "astro:assets";
+
+// Import thumbnails
 import software from "../assets/thumbsHome/softwaregestionale.webp";
 import gmpro from "../assets/thumbsHome/gmpro.webp";
 import badilatti from "../assets/thumbsHome/badilatti.webp";
@@ -10,18 +11,52 @@ import farmatouch from "../assets/thumbsHome/farmatouch.webp";
 import naranja from "../assets/thumbsHome/naranja.webp";
 import sepoy from "../assets/thumbsHome/sepoy.webp";
 import whirlpool from "../assets/thumbsHome/whirlpool.webp";
+import fahrschule from "../assets/thumbsHome/fahrschule.webp";
 
 // Import translations
 import { getLangFromUrl, useTranslations } from "../i18n/utils";
-import { caseStudies as caseStudiesData } from "../i18n/ui";
+import { defaultLang } from "../i18n/ui";
 
-// Get current language and translation function
+// Get current language
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
-// Get case studies for the current language
-const caseStudies = caseStudiesData[lang] || caseStudiesData["it"];
+// Get case studies from content collection based on language
+const allCaseStudies = await getCollection("casestudies", ({ data }) => !data.draft);
 
+// Group case studies by slug (without language prefix)
+const caseStudiesBySlug = {};
+
+allCaseStudies.forEach(entry => {
+  const [entryLang, baseSlug] = entry.slug.split('/');
+  if (!baseSlug) return;
+  
+  if (!caseStudiesBySlug[baseSlug]) {
+    caseStudiesBySlug[baseSlug] = {};
+  }
+  
+  caseStudiesBySlug[baseSlug][entryLang] = entry;
+});
+
+// Select the appropriate language version for each case study
+const caseStudies = Object.entries(caseStudiesBySlug).map(([slug, entries]) => {
+  return entries[lang] || entries[defaultLang] || Object.values(entries)[0];
+});
+
+// Function to get the correct image based on company name
+const getImageForCompany = (company) => {
+  if (company.includes('Badilatti')) return badilatti;
+  if (company.includes('dpstudio')) return software;
+  if (company.includes('Farmatouch')) return farmatouch;
+  if (company.includes('Naranja')) return naranja;
+  if (company.includes('Sepoy')) return sepoy;
+  if (company.includes('Whirlpool')) return whirlpool;
+  if (company.includes('GMPro')) return gmpro;
+  if (company.includes('Scuola Guida')) return scuolaguida;
+  if (company.includes('fahrschule')) return fahrschule;
+  // Default case if no match
+  return badilatti;
+};
 ---
 <div class="mt-24">
   <div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
@@ -39,116 +74,52 @@ const caseStudies = caseStudiesData[lang] || caseStudiesData["it"];
        lang === 'fr' ? 'Nos études de cas représentent le travail réalisé par notre cabinet de conseil numérique, montrant comment nous avons aidé diverses entreprises à améliorer l\'expérience utilisateur, à optimiser les processus de paiement et à développer des solutions numériques complètes. Nous sommes fiers de partager nos succès et de démontrer notre engagement à fournir des services de haute qualité à nos clients.' :
        lang === 'de' ? 'Unsere Fallstudien repräsentieren die Arbeit unserer digitalen Beratung und zeigen, wie wir verschiedenen Unternehmen dabei geholfen haben, die Benutzererfahrung zu verbessern, Checkout-Prozesse zu optimieren und umfassende digitale Lösungen zu entwickeln. Wir sind stolz darauf, unsere Erfolge zu teilen und unser Engagement für die Bereitstellung hochwertiger Dienstleistungen für unsere Kunden zu demonstrieren.' : 'I nostri case studies rappresentano il lavoro svolto dalla nostra consulenza digitale, mostrando come abbiamo aiutato diverse aziende a migliorare l\'esperienza utente, ottimizzare i processi di checkout e sviluppato soluzioni digitali complete. Siamo orgogliosi di condividere i nostri successi e di dimostrare il nostro impegno nel fornire servizi di alta qualità ai nostri clienti.'}
     </p>
-    
   </div>
-<div class="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-16">
-  {
-    caseStudies.map((study, index) => (
-      <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 place-self-center">
-          {/* Render the image based on the picture key */}
-          {study.company === "Caffé Badilatti" && (
+
+  <div class="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-16">
+    {
+      caseStudies.map((study) => (
+        <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 place-self-center">
+          <a href={`${lang}/casestudies/${study.slug.split('/')[1]}`}>
             <Picture 
-              src={badilatti} 
-              alt={`${study.company} project image`}
+              src={getImageForCompany(study.data.company)} 
+              alt={study.data.image?.alt || `${study.data.company} project image`}
               width={400}
               height={300}
               class="rounded-t-lg w-full object-cover"
             />
-          )}
-          {study.company === "DPStudio" && (
-            <Picture 
-              src={software} 
-              alt={`${study.company} project image`}
-              width={400}
-              height={300}
-              class="rounded-t-lg w-full object-cover"
-            />
-          )}
-          {study.company === "Farmatouch" && (
-            <Picture 
-              src={farmatouch} 
-              alt={`${study.company} project image`}
-              width={400}
-              height={300}
-              class="rounded-t-lg w-full object-cover"
-            />
-          )}
-          {study.company === "Naranja" && (
-            <Picture 
-              src={naranja} 
-              alt={`${study.company} project image`}
-              width={400}
-              height={300}
-              class="rounded-t-lg w-full object-cover"
-            />
-          )}
-          {study.company === "Sepoy" && (
-            <Picture 
-              src={sepoy} 
-              alt={`${study.company} project image`}
-              width={400}
-              height={300}
-              class="rounded-t-lg w-full object-cover"
-            />
-          )}
-          {study.company === "Whirlpool" && (
-            <Picture 
-              src={whirlpool} 
-              alt={`${study.company} project image`}
-              width={400}
-              height={300}
-              class="rounded-t-lg w-full object-cover"
-            />
-          )}
-          {study.company === "GMPro" && (
-            <Picture 
-              src={gmpro} 
-              alt={`${study.company} project image`}
-              width={400}
-              height={300}
-              class="rounded-t-lg w-full object-cover"
-            />
-          )}
-          {study.company === "Scuola Guida Lugano" && (
-            <Picture 
-              src={scuolaguida} 
-              alt={`${study.company} project image`}
-              width={400}
-              height={300}
-              class="rounded-t-lg w-full object-cover"
-            />
-          )}
-        <div class="p-5">
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-              {study.company}
-            </h5>
-          <p class="mb-3 font-normal text-gray-500 dark:text-gray-400">
-            {study.description}
-          </p>
-          {study.services.map((service, index) => (
-            <a
-              class={`inline-flex mr-2 items-center px-3 py-1 text-[14px] bg-black text-center text-white solutions rounded-sm focus:ring-4 `}>
-              {service}
-            </a>
-          ))}
-          <div class="mt-4">
-            <a href={`${lang}/casestudies/${study.company.toLowerCase().replace(/\s+/g, '-').replace(/é/g, 'e')}`} 
-               class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
-                {lang === 'it' ? 'Leggi di più' :
-                 lang === 'en' ? 'Read more' :
-                 lang === 'fr' ? 'Lire plus' :
-                 lang === 'de' ? 'Mehr lesen' : 'Leggi di più'}
-                <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-                </svg>
+            <div class="p-5">
+              <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                {study.data.company}
+              </h5>
+              <p class="mb-3 font-normal text-gray-500 dark:text-gray-400">
+                {study.data.snippet}
+              </p>
+              {/* {study.data.services?.map((service) => (
+                <span class="inline-flex items-center rounded-md bg-black px-4 py-1 mb-2 mr-2 text-sm text-white ring-1 ring-inset ring-blue-700/10">
+                  {service}
+                </span>
+              ))} */}
+            </div>
+          </a>
+          <div class="p-5 pt-0">
+            <a href={`${lang}/casestudies/${study.slug.split('/')[1]}`} 
+              class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
+              {lang === 'it' ? 'Leggi di più' :
+                lang === 'en' ? 'Read more' :
+                lang === 'fr' ? 'Lire plus' :
+                lang === 'de' ? 'Mehr lesen' : 'Leggi di più'}
+              <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+              </svg>
             </a>
           </div>
         </div>
-      </div>
-    ))
-  }
+      ))
+    }
+  </div>
 </div>
-</div>
+
 <style>
   .solutions {
     background-color: black;

@@ -1,17 +1,17 @@
 ---
 draft: false
-company: "scuolaguida"
+company: "fahrschule"
 snippet: "Admin Per Scuole Guide, create con React+PostgreSQL"
 image:
-  src: "/src/assets/thumbsHome/softwaregestionale.webp"
-  alt: "DPStudio project image"
+  src: "/src/assets/thumbsHome/fahrschule.webp"
+  alt: "dpstudio project image"
 publishDate: "2023-05-10"
-services: ["Sviluppo Software"]
+services: ["Sviluppo Software", "Fullstack Development"]
 ---
 
-# Progetto Software DPStudio
+# Progetto Software dpstudio
 
-Northsouth ha sviluppato una soluzione software completa per DPStudio che ha ottimizzato le loro operazioni aziendali. Il progetto ha comportato la creazione di un sistema di gestione personalizzato adattato alle loro esigenze specifiche.
+Northsouth ha sviluppato una soluzione software completa per Scuola Guida Lugano che ha ottimizzato le loro operazioni aziendali. Il progetto ha comportato la creazione di un sistema di gestione personalizzato adattato alle loro esigenze specifiche.
 
 ## Panoramica del Progetto
 

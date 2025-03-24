@@ -1,18 +1,18 @@
 ---
 draft: false
-title: "Développement Logiciel DPStudio"
-company: "DPStudio"
+title: "Développement Logiciel dpstudio"
+company: "dpstudio"
 snippet: "Solutions logicielles personnalisées pour l'automatisation des entreprises"
 image:
   src: "/src/assets/thumbsHome/softwaregestionale.webp"
-  alt: "Image du projet DPStudio"
+  alt: "Image du projet dpstudio"
 publishDate: "2023-05-10"
 services: ["Développement Logiciel", "Conception UI/UX"]
 ---
 
-# Projet Logiciel DPStudio
+# Projet Logiciel dpstudio
 
-Northsouth a développé une solution logicielle complète pour DPStudio qui a rationalisé leurs opérations commerciales. Le projet impliquait la création d'un système de gestion personnalisé adapté à leurs besoins spécifiques.
+Northsouth a développé une solution logicielle complète pour dpstudio qui a rationalisé leurs opérations commerciales. Le projet impliquait la création d'un système de gestion personnalisé adapté à leurs besoins spécifiques.
 
 ## Aperçu du Projet
 

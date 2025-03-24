@@ -1,18 +1,18 @@
 ---
 draft: false
-title: "DPStudio Softwareentwicklung"
-company: "DPStudio"
+title: "dpstudio Softwareentwicklung"
+company: "dpstudio"
 snippet: "Maßgeschneiderte Softwarelosungen für die Unternehmensautomatisierung"
 image:
   src: "/src/assets/thumbsHome/softwaregestionale.webp"
-  alt: "DPStudio Projektbild"
+  alt: "dpstudio Projektbild"
 publishDate: "2023-05-10"
 services: ["Softwareentwicklung", "UI/UX-Design"]
 ---
 
-# DPStudio Software-Projekt
+# dpstudio Software-Projekt
 
-Northsouth hat eine umfassende Softwarelosung für DPStudio entwickelt, die deren Geschäftsablaufe optimiert hat. Das Projekt umfasste die Erstellung eines maßgeschneiderten Managementsystems, das auf ihre spezifischen Bedurfnisse zugeschnitten ist.
+Northsouth hat eine umfassende Softwarelosung für dpstudio entwickelt, die deren Geschäftsablaufe optimiert hat. Das Projekt umfasste die Erstellung eines maßgeschneiderten Managementsystems, das auf ihre spezifischen Bedurfnisse zugeschnitten ist.
 
 ## Projektüberblick
 

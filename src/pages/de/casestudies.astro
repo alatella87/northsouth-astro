@@ -14,6 +14,7 @@ import farmatouch from "../../assets/thumbsHome/farmatouch.webp";
 import naranja from "../../assets/thumbsHome/naranja.webp";
 import sepoy from "../../assets/thumbsHome/sepoy.webp";
 import whirlpool from "../../assets/thumbsHome/whirlpool.webp";
+import fahrschule from "../../assets/thumbsHome/fahrschule.webp";
 
 // Import translations
 import { getLangFromUrl, useTranslations } from "../../i18n/utils";
@@ -42,13 +43,14 @@ allCaseStudies.forEach(entry => {
 
 // Select the appropriate language version for each case study
 const caseStudies = Object.entries(caseStudiesBySlug).map(([slug, entries]) => {
-  return entries[lang] || entries[defaultLang] || Object.values(entries)[0];
+  const typedEntries = entries as Record<string, typeof allCaseStudies[0]>;
+  return typedEntries[lang] || typedEntries[defaultLang] || Object.values(typedEntries)[0];
 });
 
 // Function to get the correct image based on company name
 const getImageForCompany = (company) => {
   if (company.includes('Badilatti')) return badilatti;
-  if (company.includes('DPStudio')) return software;
+  if (company.includes('dpstudio')) return software;
   if (company.includes('Farmatouch')) return farmatouch;
   if (company.includes('Naranja')) return naranja;
   if (company.includes('Sepoy')) return sepoy;
@@ -56,7 +58,7 @@ const getImageForCompany = (company) => {
   if (company.includes('GMPro')) return gmpro;
   if (company.includes('Scuola Guida')) return scuolaguida;
   // Default case if no match
-  return badilatti;
+  return fahrschule;
 };
 ---
 
@@ -97,11 +99,11 @@ const getImageForCompany = (company) => {
                 <p class="mb-3 font-normal text-gray-500 dark:text-gray-400">
                   {study.data.snippet}
                 </p>
-                {study.data.services.map((service) => (
+                {/* {study.data.services.map((service) => (
                   <span class="inline-flex items-center rounded-md bg-black px-4 py-1 mb-2 mr-2 text-sm text-white ring-1 ring-inset ring-blue-700/10">
                     {service}
                   </span>
-                ))}
+                ))} */}
               </div>
             </a>
           </div>

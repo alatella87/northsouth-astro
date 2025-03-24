@@ -51,7 +51,7 @@ const caseStudies = Object.entries(caseStudiesBySlug).map(([slug, entries]) => {
 // Function to get the correct image based on company name
 const getImageForCompany = (company) => {
   if (company.includes('Badilatti')) return badilatti;
-  if (company.includes('DPStudio')) return software;
+  if (company.includes('dpstudio')) return software;
   if (company.includes('Farmatouch')) return farmatouch;
   if (company.includes('Naranja')) return naranja;
   if (company.includes('Sepoy')) return sepoy;
@@ -113,11 +113,11 @@ const getImageForCompany = (company) => {
                 <p class="mb-3 font-normal text-gray-500 dark:text-gray-400">
                   {study.data.snippet}
                 </p>
-                {study.data.services.map((service) => (
+                {/* {study.data.services.map((service) => (
                   <span class="inline-flex items-center rounded-md bg-black px-4 py-1 mb-2 mr-2 text-sm text-white ring-1 ring-inset ring-blue-700/10">
                     {service}
                   </span>
-                ))}
+                ))} */}
               </div>
             </a>
           </div>

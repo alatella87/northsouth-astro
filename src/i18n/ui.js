@@ -1192,7 +1192,7 @@ export const caseStudies = {
       picture: "badilatti",
     },
     {
-      company: "DPStudio",
+      company: "dpstudio",
       services: ["UX/UI design", "Visual identity"],
       description:
         "Sviluppato un nuovo funnel e una landing page SaaS per softwaregestionale.ch, una piattaforma di gestione software che serve piccole e medie imprese nella Svizzera italiana.",
@@ -1250,7 +1250,7 @@ export const caseStudies = {
       picture: "badilatti",
     },
     {
-      company: "DPStudio",
+      company: "dpstudio",
       services: ["UX/UI design", "Visual identity"],
       description:
         "Developed a new funnel and SaaS landing page for softwaregestionale.ch, a software management platform serving small and medium enterprises in Italian-speaking Switzerland.",
@@ -1308,7 +1308,7 @@ export const caseStudies = {
       picture: "badilatti",
     },
     {
-      company: "DPStudio",
+      company: "dpstudio",
       services: ["UX/UI design", "Identité visuelle"],
       description:
         "Développement d'un nouveau funnel et d'une landing page SaaS pour softwaregestionale.ch, une plateforme de gestion de logiciels desservant les petites et moyennes entreprises de la Suisse italophone.",
@@ -1366,7 +1366,7 @@ export const caseStudies = {
       picture: "badilatti",
     },
     {
-      company: "DPStudio",
+      company: "dpstudio",
       services: ["UX/UI Design", "Visuelle Identität"],
       description:
         "Entwicklung eines neuen Funnels und einer SaaS-Landingpage für softwaregestionale.ch, eine Software-Management-Plattform für kleine und mittlere Unternehmen in der italienischsprachigen Schweiz.",

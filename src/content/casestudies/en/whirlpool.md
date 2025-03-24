@@ -7,7 +7,7 @@ image:
   src: "/src/assets/thumbsHome/whirlpool.webp"
   alt: "Whirlpool project image"
 publishDate: "2023-11-10"
-services: ["Digital Product Design", "UX Research", "Mobile App Development"]
+services: ["Digital Product Design", "UX Research"]
 ---
 
 # Whirlpool Digital Consumer Experience
